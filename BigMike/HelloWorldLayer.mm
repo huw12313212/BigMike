@@ -71,13 +71,6 @@ enum {
 		[self addChild:parent z:0 tag:kTagParentNode];
 		
 		
-//		[self addNewSpriteAtPosition:ccp(s.width/2, s.height/2)];
-//
-//		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Tap screen" fontName:@"Marker Felt" fontSize:32];
-//		[self addChild:label z:0];
-//		[label setColor:ccc3(0,0,255)];
-//		label.position = ccp( s.width/2, s.height-50);
-//        
         
         fly = [CCLabelTTF labelWithString:@"飛機" fontName:@"Marker Felt" fontSize:32];
         
@@ -92,12 +85,6 @@ enum {
 
 -(void) dealloc
 {
-	//delete world;
-	//world = NULL;
-	
-	//delete m_debugDraw;
-	//m_debugDraw = NULL;
-	
 	[super dealloc];
 }	
 

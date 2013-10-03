@@ -1533,6 +1533,7 @@
 				8A4CE7FD17FD8F1B00241E1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
