@@ -59,20 +59,20 @@ enum {
 		CGSize s = [CCDirector sharedDirector].winSize;
 		
 
-#if 1
-		// Use batch node. Faster
-		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
-		spriteTexture_ = [parent texture];
-#else
-		// doesn't use batch node. Slower
-		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks.png"];
-		CCNode *parent = [CCNode node];
-#endif
-		[self addChild:parent z:0 tag:kTagParentNode];
+//#if 1
+//		// Use batch node. Faster
+//		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
+//		spriteTexture_ = [parent texture];
+//#else
+//		// doesn't use batch node. Slower
+//		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks.png"];
+//		CCNode *parent = [CCNode node];
+//#endif
+//		[self addChild:parent z:0 tag:kTagParentNode];
 		
 		
         
-        fly = [CCLabelTTF labelWithString:@"飛機" fontName:@"Marker Felt" fontSize:32];
+        fly = [CCLabelTTF labelWithString:@"艦" fontName:@"Marker Felt" fontSize:32];
         
         [self addChild:fly];
         [fly setColor:ccc3(0,0,255)];
@@ -166,6 +166,23 @@ enum {
 -(void) update: (ccTime) dt
 {
 	
+    [self correctPlayerPosition];
+    
+}
+
+-(void)correctPlayerPosition
+{
+    float nowPositionX = [fly position].x;
+    float nowPositionY = [fly position].y;
+    
+    if(nowPositionX<0)nowPositionX = 0;
+    if(nowPositionY<0)nowPositionY = 0;
+    
+    if(nowPositionX>480)nowPositionX = 480;
+    if(nowPositionY>320)nowPositionY = 320;
+    
+    [fly setPosition:ccp(nowPositionX,nowPositionY)];
+    
 }
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -185,6 +202,8 @@ enum {
         CGPoint diff = ccpSub(touchLocation,prevLocation);
         
         [fly setPosition:ccpAdd([fly position], diff)];
+        
+        CCLOG(@"hello %f,%f",[fly position].x,[fly position].y);
     }
 }
 

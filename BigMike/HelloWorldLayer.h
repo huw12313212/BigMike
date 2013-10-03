@@ -23,7 +23,7 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-	CCTexture2D *spriteTexture_;	// weak ref    
+	CCTexture2D *spriteTexture_;	// weak ref
     CCLabelTTF *fly;
 }
 
