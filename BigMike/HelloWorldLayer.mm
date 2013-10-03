@@ -56,10 +56,10 @@ enum {
 		self.accelerometerEnabled = YES;
 		CGSize s = [CCDirector sharedDirector].winSize;
 		
-		// init physics
+//		// init physics
 		[self initPhysics];
 		
-		// create reset button
+//		// create reset button
 		[self createMenu];
 		
 		//Set up sprite
@@ -157,7 +157,7 @@ enum {
 	CGSize s = [[CCDirector sharedDirector] winSize];
 	
 	b2Vec2 gravity;
-	gravity.Set(0.0f, -10.0f);
+	gravity.Set(0.0f, 10.0f);
 	world = new b2World(gravity);
 	
 	
@@ -166,15 +166,15 @@ enum {
 	
 	world->SetContinuousPhysics(true);
 	
-	m_debugDraw = new GLESDebugDraw( PTM_RATIO );
+	m_debugDraw = new GLESDebugDraw( 8 );
 	world->SetDebugDraw(m_debugDraw);
 	
 	uint32 flags = 0;
 	flags += b2Draw::e_shapeBit;
-	//		flags += b2Draw::e_jointBit;
-	//		flags += b2Draw::e_aabbBit;
-	//		flags += b2Draw::e_pairBit;
-	//		flags += b2Draw::e_centerOfMassBit;
+			flags += b2Draw::e_jointBit;
+			flags += b2Draw::e_aabbBit;
+			flags += b2Draw::e_pairBit;
+			flags += b2Draw::e_centerOfMassBit;
 	m_debugDraw->SetFlags(flags);		
 	
 	
