@@ -24,11 +24,14 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-    CCLabelTTF *fly;
+    
 
 }
 
 @property (nonatomic,strong)BulletManager* bulletManager;
+@property (nonatomic,strong)Player* player;
+@property (nonatomic,strong)ArticleAnalysis* articleAnalysis;
+@property (nonatomic,strong)EnemyManager* enemyManager;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;

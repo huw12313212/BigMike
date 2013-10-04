@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
 
 @interface Player : NSObject
+{
+    BOOL isAlive;
+}
+
+
+@property (nonatomic, strong)CCLabelTTF* playerLabel;
+@property (nonatomic,assign)CCNode* parentNode;
+
+-(id)init:(CCNode*) parent;
+-(void)movePlayerWithDif:(CGPoint)Dif;
+-(void)update :(ccTime)dt;
+
+-(CGPoint) position;
 
 @end

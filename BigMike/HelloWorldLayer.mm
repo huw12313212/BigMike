@@ -55,9 +55,12 @@ enum {
 	if( (self=[super init])) {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
+        self.player = [[Player alloc]init:self];
+        self.articleAnalysis = [[ArticleAnalysis alloc]init];
+        self.enemyManager = [[EnemyManager alloc]init:self];
+        [self.enemyManager setNowArticleAnaysis:self.articleAnalysis];
         
-		// enable events
-		
+        
 		self.touchEnabled = YES;
 		self.accelerometerEnabled = YES;
         
@@ -147,10 +150,8 @@ enum {
         
         CGPoint diff = ccpSub(touchLocation,prevLocation);
         
-        [fly setPosition:ccpAdd([fly position], diff)];
-        
-        CCLOG(@"Player Position %f,%f",[fly position].x,[fly position].y);
-    }
+        [self.player movePlayerWithDif:diff];
+            }
 }
 
 #pragma mark GameKit delegate

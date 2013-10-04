@@ -7,8 +7,64 @@
 //
 
 #import "Player.h"
-#import "cocos2d.h"
+#import "Constants.h"
+
 
 @implementation Player
+{
+    
+}
+
+-(id)init:(CCNode*) parent;
+{
+    if(self = [super init])
+    {
+    
+    self.parentNode = parent;
+    self.playerLabel = [CCLabelTTF labelWithString: PLAYER_WORD fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
+    [parent addChild:self.playerLabel ];
+    
+    [self.playerLabel setColor:PLAYER_COLOR];
+    self.playerLabel.position = PLAYER_POSITION;
+    
+    isAlive = true;
+    
+    return self;
+    }
+    else
+    {
+        return nil;
+    }
+}
+
+-(void)movePlayerWithDif:(CGPoint)Dif
+{
+    CGPoint newPosition = ccpAdd([self position],Dif);
+    [self.playerLabel setPosition:newPosition];
+}
+
+-(void)update :(ccTime)dt
+{
+    [self correctPosition];
+}
+
+-(void)correctPosition
+{
+    float nowPositionX = [self position].x;
+    float nowPositionY = [self position].y;
+    
+    if(nowPositionX<0)nowPositionX = 0;
+    if(nowPositionY<0)nowPositionY = 0;
+    
+    if(nowPositionX>SCREEN_WIDTH)nowPositionX = SCREEN_WIDTH;
+    if(nowPositionY>SCREEN_HEIGHT)nowPositionY = SCREEN_HEIGHT;
+    
+    [self.playerLabel setPosition:ccp(nowPositionX,nowPositionY)];
+}
+
+-(CGPoint)position
+{
+    return [self.playerLabel position];
+}
     
 @end

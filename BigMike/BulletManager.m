@@ -52,7 +52,7 @@
     while(TimeCount>threashold)
     {
         TimeCount-= threashold;
-        [self ShootABullet:position];
+        [self ShootABullet:ccpAdd(position,BULLET_OFFSET)];
     }
     
     for(Bullet* bullet in self.BulletArray)
