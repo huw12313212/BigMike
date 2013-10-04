@@ -53,20 +53,13 @@ enum {
 	if( (self=[super init])) {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
-        
+        self.player = [[Player alloc]init:self];
 		// enable events
 		
 		self.touchEnabled = YES;
 		self.accelerometerEnabled = YES;
         
-		CGSize s = [CCDirector sharedDirector].winSize;
-        
-        fly = [CCLabelTTF labelWithString: PLAYER_WORD fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
-        [self addChild:fly];
-        
-        
-        [fly setColor:PLAYER_COLOR];
-        fly.position = ccp( 40, s.height/2);
+
 		
 		[self scheduleUpdate];
 	}
@@ -92,27 +85,11 @@ enum {
 
 -(void) update: (ccTime) dt
 {
-	
-    [self correctPlayerPosition];
-    
-    [self.bulletManager update:dt withPoint:[fly position]];
+    [self.player update:dt];
+    [self.bulletManager update:dt withPoint:[self.player position]];
     
 }
 
--(void)correctPlayerPosition
-{
-    float nowPositionX = [fly position].x;
-    float nowPositionY = [fly position].y;
-    
-    if(nowPositionX<0)nowPositionX = 0;
-    if(nowPositionY<0)nowPositionY = 0;
-    
-    if(nowPositionX>SCREEN_WIDTH)nowPositionX = SCREEN_WIDTH;
-    if(nowPositionY>SCREEN_HEIGHT)nowPositionY = SCREEN_HEIGHT;
-    
-    [fly setPosition:ccp(nowPositionX,nowPositionY)];
-    
-}
 
 - (void)ccTouchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
@@ -130,10 +107,8 @@ enum {
         
         CGPoint diff = ccpSub(touchLocation,prevLocation);
         
-        [fly setPosition:ccpAdd([fly position], diff)];
-        
-        CCLOG(@"Player Position %f,%f",[fly position].x,[fly position].y);
-    }
+        [self.player movePlayerWithDif:diff];
+            }
 }
 
 #pragma mark GameKit delegate

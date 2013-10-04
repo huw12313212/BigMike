@@ -27,8 +27,8 @@
     
     bulletparent = parent;
     
-    self.bulletTexture = [CCLabelTTF labelWithString:@"彈" fontName:DEFAULT_FONT fontSize:BULLET_SIZE];
-    [self.bulletTexture  setColor:ccc3(0,0,255)];
+    self.bulletTexture = [CCLabelTTF labelWithString:BULLET_WORD fontName:DEFAULT_FONT fontSize:BULLET_SIZE];
+    [self.bulletTexture  setColor:BULLET_COLOR];
     return self;
 }
 
