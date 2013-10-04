@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1DFDF417FEFB9300313F72 /* GroundWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DFDF317FEFB9300313F72 /* GroundWord.m */; };
 		8A4CE5B417FD8F1900241E1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */; };
 		8A4CE5B617FD8F1900241E1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */; };
 		8A4CE5B817FD8F1900241E1F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B717FD8F1900241E1F /* OpenAL.framework */; };
@@ -194,6 +195,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1DFDF217FEFB9300313F72 /* GroundWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroundWord.h; sourceTree = "<group>"; };
+		0E1DFDF317FEFB9300313F72 /* GroundWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundWord.m; sourceTree = "<group>"; };
 		8A4CE5B017FD8F1900241E1F /* BigMike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigMike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -602,6 +605,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1DFDF117FEFB4600313F72 /* Background */ = {
+			isa = PBXGroup;
+			children = (
+				0E1DFDF217FEFB9300313F72 /* GroundWord.h */,
+				0E1DFDF317FEFB9300313F72 /* GroundWord.m */,
+			);
+			name = Background;
+			sourceTree = "<group>";
+		};
 		8A4CE5A717FD8F1900241E1F = {
 			isa = PBXGroup;
 			children = (
@@ -642,6 +654,7 @@
 				8A91DDC417FED7D90030DD34 /* System */,
 				8A91DDC317FED7C70030DD34 /* Player */,
 				8A91DDC217FED7B30030DD34 /* Bullet */,
+				0E1DFDF117FEFB4600313F72 /* Background */,
 				8A91DDB817FE8BCF0030DD34 /* Constants.h */,
 				8A4CE5C817FD8F1900241E1F /* Resources */,
 				8A4CE5E017FD8F1900241E1F /* libs */,
@@ -1409,6 +1422,7 @@
 				8A4CE7E417FD8F1B00241E1F /* b2Rope.cpp in Sources */,
 				8A4CE70F17FD8F1A00241E1F /* CDAudioManager.m in Sources */,
 				8A4CE76317FD8F1B00241E1F /* b2Collision.cpp in Sources */,
+				0E1DFDF417FEFB9300313F72 /* GroundWord.m in Sources */,
 				8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */,
 				8A4CE6BC17FD8F1A00241E1F /* CCTransitionProgress.m in Sources */,
 				8A4CE6DF17FD8F1A00241E1F /* CCGLView.m in Sources */,

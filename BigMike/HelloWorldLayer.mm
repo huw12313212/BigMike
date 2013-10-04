@@ -25,7 +25,9 @@ enum {
 
 #pragma mark - HelloWorldLayer
 
-@interface HelloWorldLayer()
+@interface HelloWorldLayer(){
+    float creatTime;
+}
 
 
 @end
@@ -64,7 +66,6 @@ enum {
         fly = [CCLabelTTF labelWithString: PLAYER_WORD fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
         [self addChild:fly];
         
-        
         [fly setColor:PLAYER_COLOR];
         fly.position = ccp( 40, s.height/2);
 		
@@ -92,11 +93,27 @@ enum {
 
 -(void) update: (ccTime) dt
 {
-	
+    creatTime += dt;
+	if (creatTime>0.2) {
+        creatTime = 0;
+        [self creatGround:0];
+        [self creatGround:1];
+        [self creatGround:2];
+        [self creatGround:3];
+        [self creatGround:4];
+        [self creatGround:5];
+        [self creatGround:6];
+    }
+    
     [self correctPlayerPosition];
     
     [self.bulletManager update:dt withPoint:[fly position]];
     
+}
+
+-(void)creatGround:(int)line{
+    GroundWord *ground = [[GroundWord alloc] init:line];
+    [self addChild:ground z:-100];
 }
 
 -(void)correctPlayerPosition
