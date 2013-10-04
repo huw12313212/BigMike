@@ -188,6 +188,10 @@
 		8A4CE7F317FD8F1B00241E1F /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */; };
 		8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */; };
 		8A4CE7F817FD8F1B00241E1F /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F717FD8F1B00241E1F /* blocks.png */; };
+		8A7F043A17FEEDC800A84B23 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043917FEEDC800A84B23 /* Enemy.m */; };
+		8A7F043D17FEEDDF00A84B23 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */; };
+		8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */; };
+		8A7F044317FEF04100A84B23 /* ArticleAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */; };
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
@@ -572,6 +576,14 @@
 		8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		8A4CE7F717FD8F1B00241E1F /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		8A7F043817FEEDC800A84B23 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		8A7F043917FEEDC800A84B23 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		8A7F043B17FEEDDF00A84B23 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
+		8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
+		8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath.h; sourceTree = "<group>"; };
+		8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath.m; sourceTree = "<group>"; };
+		8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleAnalysis.h; sourceTree = "<group>"; };
+		8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleAnalysis.m; sourceTree = "<group>"; };
 		8A91DDB517FE831F0030DD34 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		8A91DDB617FE831F0030DD34 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		8A91DDB817FE8BCF0030DD34 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -639,6 +651,7 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A7F043717FEEC9900A84B23 /* Enemy */,
 				8A91DDC417FED7D90030DD34 /* System */,
 				8A91DDC317FED7C70030DD34 /* Player */,
 				8A91DDC217FED7B30030DD34 /* Bullet */,
@@ -1190,6 +1203,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8A7F043717FEEC9900A84B23 /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F043817FEEDC800A84B23 /* Enemy.h */,
+				8A7F043917FEEDC800A84B23 /* Enemy.m */,
+				8A7F043B17FEEDDF00A84B23 /* EnemyManager.h */,
+				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
+				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
+				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
+				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
+				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
+			);
+			name = Enemy;
+			sourceTree = "<group>";
+		};
 		8A91DDC217FED7B30030DD34 /* Bullet */ = {
 			isa = PBXGroup;
 			children = (
@@ -1304,6 +1332,7 @@
 				8A4CE64517FD8F1900241E1F /* CCLayer.m in Sources */,
 				8A4CE77017FD8F1B00241E1F /* b2ChainShape.cpp in Sources */,
 				8A4CE6A717FD8F1A00241E1F /* CCTileMapAtlas.m in Sources */,
+				8A7F044317FEF04100A84B23 /* ArticleAnalysis.m in Sources */,
 				8A4CE6AA17FD8F1A00241E1F /* CCTMXLayer.m in Sources */,
 				8A4CE75F17FD8F1B00241E1F /* b2CollideEdge.cpp in Sources */,
 				8A4CE77317FD8F1B00241E1F /* b2CircleShape.cpp in Sources */,
@@ -1371,7 +1400,9 @@
 				8A4CE63C17FD8F1900241E1F /* CCLabelAtlas.m in Sources */,
 				8A4CE65817FD8F1A00241E1F /* CCParallaxNode.m in Sources */,
 				8A4CE5F017FD8F1900241E1F /* CCActionGrid.m in Sources */,
+				8A7F043A17FEEDC800A84B23 /* Enemy.m in Sources */,
 				8A4CE63917FD8F1900241E1F /* CCGrid.m in Sources */,
+				8A7F043D17FEEDDF00A84B23 /* EnemyManager.m in Sources */,
 				8A4CE74817FD8F1B00241E1F /* quaternion.c in Sources */,
 				8A4CE69517FD8F1A00241E1F /* CCSpriteFrame.m in Sources */,
 				8A4CE60217FD8F1900241E1F /* CCActionProgressTimer.m in Sources */,
@@ -1402,6 +1433,7 @@
 				8A4CE60B17FD8F1900241E1F /* CCAnimation.m in Sources */,
 				8A4CE73617FD8F1B00241E1F /* aabb.c in Sources */,
 				8A4CE6AD17FD8F1A00241E1F /* CCTMXObjectGroup.m in Sources */,
+				8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */,
 				8A91DDC117FED7A60030DD34 /* Player.m in Sources */,
 				8A4CE7B817FD8F1B00241E1F /* b2EdgeAndPolygonContact.cpp in Sources */,
 				8A4CE7BB17FD8F1B00241E1F /* b2PolygonAndCircleContact.cpp in Sources */,

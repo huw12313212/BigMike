@@ -15,6 +15,8 @@
 #import "GLES-Render.h"
 #import "BulletManager.h"
 #import "Player.h"
+#import "ArticleAnalysis.h"
+#import "EnemyManager.h"
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -31,6 +33,8 @@
 
 @property (nonatomic,strong)BulletManager* bulletManager;
 @property (nonatomic,strong)Player* player;
+@property (nonatomic,strong)ArticleAnalysis* articleAnalysis;
+@property (nonatomic,strong)EnemyManager* enemyManager;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;

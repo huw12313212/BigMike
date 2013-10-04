@@ -22,6 +22,7 @@
 #define BULLET_FREQUENCY 8
 #define BULLET_SPEED 8
 #define BULLET_COLOR ccc3(0,0,255)
+#define BULLET_OFFSET ccp(10,0)
 
 #define PLAYER_WORD @"艦"
 #define PLAYER_SIZE 32

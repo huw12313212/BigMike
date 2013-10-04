@@ -21,7 +21,6 @@
 -(id)init:(CCNode*) parent;
 -(void)movePlayerWithDif:(CGPoint)Dif;
 -(void)update :(ccTime)dt;
--(void)correctPosition;
 
 -(CGPoint) position;
 

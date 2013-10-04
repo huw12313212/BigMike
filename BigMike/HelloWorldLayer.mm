@@ -54,12 +54,13 @@ enum {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
         self.player = [[Player alloc]init:self];
-		// enable events
-		
+        self.articleAnalysis = [[ArticleAnalysis alloc]init];
+        self.enemyManager = [[EnemyManager alloc]init:self];
+        [self.enemyManager setNowArticleAnaysis:self.articleAnalysis];
+        
+        
 		self.touchEnabled = YES;
 		self.accelerometerEnabled = YES;
-        
-
 		
 		[self scheduleUpdate];
 	}
@@ -87,6 +88,7 @@ enum {
 {
     [self.player update:dt];
     [self.bulletManager update:dt withPoint:[self.player position]];
+    [self.enemyManager update:dt];
     
 }
 
