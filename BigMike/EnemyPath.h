@@ -10,7 +10,16 @@
 #import "cocos2d.h"
 
 @interface EnemyPath : NSObject
+{
+    @public
+    Boolean isLimitedLife;
+    float maxLifeTime;
+}
+
+-(id)init;
 
 -(CGPoint) GetPosition:(float) nowTime;
+
+
 
 @end

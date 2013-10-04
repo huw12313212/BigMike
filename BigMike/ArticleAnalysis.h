@@ -10,7 +10,7 @@
 
 @interface ArticleAnalysis : NSObject
 {
-    
+    int index;
 }
 
 @property (strong,nonatomic)NSString* title;
@@ -20,8 +20,9 @@
 
 -(id)init;
 -(void)analysis;
+-(Boolean)isEnd;
 
-
+-(NSString*) GetNextLine;
 
 
 @end

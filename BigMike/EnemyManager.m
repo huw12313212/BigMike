@@ -8,18 +8,54 @@
 
 #import "EnemyManager.h"
 #import "Enemy.h"
+#import "Constants.h"
 
 
 @implementation EnemyManager
 
 -(void)update:(ccTime)dt
 {
-    if([self isAllDead])
+    if(![self.nowArticleAnaysis isEnd])
     {
-        
+        if([self isAllDead])
+        {
+            EnemyPath* path = [[EnemyPath alloc]init];
+            
+            
+            NSString* nextLine = [self.nowArticleAnaysis GetNextLine];
+            
+            int len = [nextLine length];
+            for (int i = 0; i < len; i++) {
+               
+                
+                NSString* character = [nextLine substringWithRange:NSMakeRange(i, 1)];
+                Enemy* enemy = [[Enemy alloc]init :self.parentNode : character];
+                [self.parentNode addChild:enemy.enemyLabel];
+                enemy->time= -i*ENEMY_PADDING;
+                enemy.path = path;
+                
+                [self.nowAliveEnemies addObject:enemy];
+            }
+        }
     }
     
-    CCLOG(@"test");
+    for(Enemy* enemy in self.nowAliveEnemies)
+    {
+        [enemy update:dt];
+        
+        if(!enemy->isAlive)
+        {
+            [self.trashEnemies addObject:enemy];
+        }
+    }
+    
+    for(Enemy* enemy in self.trashEnemies)
+    {
+        [self.nowAliveEnemies removeObject:enemy];
+        [self.parentNode removeChild:enemy.enemyLabel];
+    }
+    
+    [self.trashEnemies removeAllObjects];
 }
 
 -(id)init : (CCNode*) parent
@@ -27,13 +63,14 @@
     if(self = [super init])
     {
      self.parentNode = parent;
-    
-    
-    return self;
+     self.nowAliveEnemies = [[NSMutableArray alloc]init];
+     self.trashEnemies =[[NSMutableArray alloc]init];
+        
+     return self;
     }
     else
     {
-    return nil;
+      return nil;
     }
 }
 

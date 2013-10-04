@@ -12,14 +12,28 @@
 
 @implementation EnemyPath
 
+-(id)init
+{
+    if(self = [super init])
+    {
+        isLimitedLife = true;
+        maxLifeTime = 6;
+    
+        return self;
+    }
+    else
+    {
+        return nil;
+    }
+    
+}
+
 -(CGPoint) GetPosition:(float) nowTime
 {
-//    float totalTime = 3;
-//    
-//    float X = -10 + ((480+20) * ((totalTime - nowTime)/totalTime));
-//    float Y = 160 + 140 * cos(nowTime);
-//    
-//    return ccp(X,Y);
+    float X = -10 + ((480+20) * ((maxLifeTime - nowTime)/maxLifeTime));
+    float Y = 160 + 140 * cos(nowTime*2);
+    
+    return ccp(X,Y);
 }
     
 @end

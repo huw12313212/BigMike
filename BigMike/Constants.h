@@ -42,5 +42,7 @@
 #define GROUND_SIZE_SMALL 20
 #define GROUND_SIZE_SMALLEST 18
 
+#define ENEMY_PADDING 0.2f
+
 
 #endif

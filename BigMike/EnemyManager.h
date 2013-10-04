@@ -16,6 +16,8 @@
 }
 
 @property (nonatomic,strong)NSMutableArray* nowAliveEnemies;
+@property (nonatomic,strong)NSMutableArray* trashEnemies;
+
 @property (nonatomic,assign)ArticleAnalysis* nowArticleAnaysis;
 @property (nonatomic,assign)CCNode* parentNode;
 
