@@ -26,9 +26,7 @@ enum {
 #pragma mark - HelloWorldLayer
 
 @interface HelloWorldLayer()
--(void) initPhysics;
--(void) addNewSpriteAtPosition:(CGPoint)p;
--(void) createMenu;
+
 
 @end
 
@@ -62,27 +60,13 @@ enum {
 		self.accelerometerEnabled = YES;
         
 		CGSize s = [CCDirector sharedDirector].winSize;
-		
-
-//#if 1
-//		// Use batch node. Faster
-//		CCSpriteBatchNode *parent = [CCSpriteBatchNode batchNodeWithFile:@"blocks.png" capacity:100];
-//		spriteTexture_ = [parent texture];
-//#else
-//		// doesn't use batch node. Slower
-//		spriteTexture_ = [[CCTextureCache sharedTextureCache] addImage:@"blocks.png"];
-//		CCNode *parent = [CCNode node];
-//#endif
-//		[self addChild:parent z:0 tag:kTagParentNode];
-		
-		
         
-        fly = [CCLabelTTF labelWithString:@"艦" fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
+        fly = [CCLabelTTF labelWithString: PLAYER_WORD fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
         [self addChild:fly];
         
         
-        [fly setColor:ccc3(0,0,255)];
-        fly.position = ccp( s.width/2, s.height-50);
+        [fly setColor:PLAYER_COLOR];
+        fly.position = ccp( 40, s.height/2);
 		
 		[self scheduleUpdate];
 	}
@@ -94,64 +78,6 @@ enum {
 	[super dealloc];
 }	
 
--(void) createMenu
-{
-	// Default font size will be 22 points.
-	[CCMenuItemFont setFontSize:22];
-	
-	// Reset Button
-	CCMenuItemLabel *reset = [CCMenuItemFont itemWithString:@"Reset" block:
-                              ^(id sender){
-		[[CCDirector sharedDirector] replaceScene: [IntroLayer scene]];
-	}
-                              ];
-
-	// to avoid a retain-cycle with the menuitem and blocks
-	__block id copy_self = self;
-
-	// Achievement Menu Item using blocks
-	CCMenuItem *itemAchievement = [CCMenuItemFont itemWithString:@"Achievements" block:^(id sender) {
-		
-		
-		GKAchievementViewController *achivementViewController = [[GKAchievementViewController alloc] init];
-		achivementViewController.achievementDelegate = copy_self;
-		
-		AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-		
-		[[app navController] presentModalViewController:achivementViewController animated:YES];
-		
-		[achivementViewController release];
-	}];
-	
-	// Leaderboard Menu Item using blocks
-	CCMenuItem *itemLeaderboard = [CCMenuItemFont itemWithString:@"Leaderboard" block:^(id sender) {
-		
-		
-		GKLeaderboardViewController *leaderboardViewController = [[GKLeaderboardViewController alloc] init];
-		leaderboardViewController.leaderboardDelegate = copy_self;
-		
-		AppController *app = (AppController*) [[UIApplication sharedApplication] delegate];
-		
-		[[app navController] presentModalViewController:leaderboardViewController animated:YES];
-		
-		[leaderboardViewController release];
-	}];
-	
-	CCMenu *menu = [CCMenu menuWithItems:itemAchievement, itemLeaderboard, reset, nil];
-	
-	[menu alignItemsVertically];
-	
-	CGSize size = [[CCDirector sharedDirector] winSize];
-	[menu setPosition:ccp( size.width/2, size.height/2)];
-	
-	
-	[self addChild: menu z:-1];	
-}
-
--(void) initPhysics
-{
-
-}
 
 -(void) draw
 {
@@ -160,14 +86,9 @@ enum {
 	
 	ccGLEnableVertexAttribs( kCCVertexAttribFlag_Position );
 	
-
 }
 
--(void) addNewSpriteAtPosition:(CGPoint)p
-{
 
-
-}
 
 -(void) update: (ccTime) dt
 {
@@ -211,7 +132,7 @@ enum {
         
         [fly setPosition:ccpAdd([fly position], diff)];
         
-        CCLOG(@"hello %f,%f",[fly position].x,[fly position].y);
+        CCLOG(@"Player Position %f,%f",[fly position].x,[fly position].y);
     }
 }
 

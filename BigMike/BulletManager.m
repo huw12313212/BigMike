@@ -45,7 +45,7 @@
 {
     TimeCount += dt;
 
-    CCLOG(@"%f",TimeCount);
+    //CCLOG(@"%f",TimeCount);
     
     float threashold = 1.0f/BULLET_FREQUENCY;
     
@@ -70,7 +70,6 @@
     currentBulletIndex = currentBulletIndex % BULLET_MAX_COUNT;
     
     [nowBullet shootFromPosition:position];
-    
     
 }
 

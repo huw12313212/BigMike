@@ -190,6 +190,7 @@
 		8A4CE7F817FD8F1B00241E1F /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F717FD8F1B00241E1F /* blocks.png */; };
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
+		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -576,6 +577,8 @@
 		8A91DDB817FE8BCF0030DD34 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8A91DDBC17FEB8B60030DD34 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
 		8A91DDBD17FEB8B60030DD34 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
+		8A91DDBF17FED7A60030DD34 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		8A91DDC017FED7A60030DD34 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -636,19 +639,10 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A91DDC417FED7D90030DD34 /* System */,
+				8A91DDC317FED7C70030DD34 /* Player */,
+				8A91DDC217FED7B30030DD34 /* Bullet */,
 				8A91DDB817FE8BCF0030DD34 /* Constants.h */,
-				8A4CE7EB17FD8F1B00241E1F /* AppDelegate.h */,
-				8A91DDB517FE831F0030DD34 /* Bullet.h */,
-				8A91DDB617FE831F0030DD34 /* Bullet.m */,
-				8A91DDBC17FEB8B60030DD34 /* BulletManager.h */,
-				8A91DDBD17FEB8B60030DD34 /* BulletManager.m */,
-				8A4CE7EC17FD8F1B00241E1F /* AppDelegate.mm */,
-				8A4CE7EE17FD8F1B00241E1F /* HelloWorldLayer.h */,
-				8A4CE7EF17FD8F1B00241E1F /* HelloWorldLayer.mm */,
-				8A4CE7F117FD8F1B00241E1F /* IntroLayer.h */,
-				8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */,
-				8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */,
-				8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */,
 				8A4CE5C817FD8F1900241E1F /* Resources */,
 				8A4CE5E017FD8F1900241E1F /* libs */,
 				8A4CE7E717FD8F1B00241E1F /* Supporting Files */,
@@ -1196,6 +1190,41 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8A91DDC217FED7B30030DD34 /* Bullet */ = {
+			isa = PBXGroup;
+			children = (
+				8A91DDB517FE831F0030DD34 /* Bullet.h */,
+				8A91DDB617FE831F0030DD34 /* Bullet.m */,
+				8A91DDBC17FEB8B60030DD34 /* BulletManager.h */,
+				8A91DDBD17FEB8B60030DD34 /* BulletManager.m */,
+			);
+			name = Bullet;
+			sourceTree = "<group>";
+		};
+		8A91DDC317FED7C70030DD34 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				8A91DDBF17FED7A60030DD34 /* Player.h */,
+				8A91DDC017FED7A60030DD34 /* Player.m */,
+			);
+			name = Player;
+			sourceTree = "<group>";
+		};
+		8A91DDC417FED7D90030DD34 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				8A4CE7EB17FD8F1B00241E1F /* AppDelegate.h */,
+				8A4CE7EC17FD8F1B00241E1F /* AppDelegate.mm */,
+				8A4CE7EE17FD8F1B00241E1F /* HelloWorldLayer.h */,
+				8A4CE7EF17FD8F1B00241E1F /* HelloWorldLayer.mm */,
+				8A4CE7F117FD8F1B00241E1F /* IntroLayer.h */,
+				8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */,
+				8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */,
+				8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1373,6 +1402,7 @@
 				8A4CE60B17FD8F1900241E1F /* CCAnimation.m in Sources */,
 				8A4CE73617FD8F1B00241E1F /* aabb.c in Sources */,
 				8A4CE6AD17FD8F1A00241E1F /* CCTMXObjectGroup.m in Sources */,
+				8A91DDC117FED7A60030DD34 /* Player.m in Sources */,
 				8A4CE7B817FD8F1B00241E1F /* b2EdgeAndPolygonContact.cpp in Sources */,
 				8A4CE7BB17FD8F1B00241E1F /* b2PolygonAndCircleContact.cpp in Sources */,
 				8A4CE79F17FD8F1B00241E1F /* b2World.cpp in Sources */,

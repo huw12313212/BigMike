@@ -24,10 +24,8 @@
 // HelloWorldLayer
 @interface HelloWorldLayer : CCLayer <GKAchievementViewControllerDelegate, GKLeaderboardViewControllerDelegate>
 {
-	CCTexture2D *spriteTexture_;	// weak ref
     CCLabelTTF *fly;
-    //BulletManager *bulletManager;
-    //NSMutableArray
+
 }
 
 @property (nonatomic,strong)BulletManager* bulletManager;

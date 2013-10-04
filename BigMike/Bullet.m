@@ -39,7 +39,7 @@
         self.bulletTexture.position = point;
         isShooted = true;
         [bulletparent addChild:self.bulletTexture];
-        CCLOG(@"test");
+        //CCLOG(@"test");
     }
 }
 
