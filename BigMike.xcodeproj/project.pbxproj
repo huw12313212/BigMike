@@ -188,6 +188,8 @@
 		8A4CE7F317FD8F1B00241E1F /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */; };
 		8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */; };
 		8A4CE7F817FD8F1B00241E1F /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F717FD8F1B00241E1F /* blocks.png */; };
+		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
+		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -569,6 +571,11 @@
 		8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		8A4CE7F717FD8F1B00241E1F /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		8A91DDB517FE831F0030DD34 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
+		8A91DDB617FE831F0030DD34 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
+		8A91DDB817FE8BCF0030DD34 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8A91DDBC17FEB8B60030DD34 /* BulletManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BulletManager.h; sourceTree = "<group>"; };
+		8A91DDBD17FEB8B60030DD34 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -629,7 +636,12 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A91DDB817FE8BCF0030DD34 /* Constants.h */,
 				8A4CE7EB17FD8F1B00241E1F /* AppDelegate.h */,
+				8A91DDB517FE831F0030DD34 /* Bullet.h */,
+				8A91DDB617FE831F0030DD34 /* Bullet.m */,
+				8A91DDBC17FEB8B60030DD34 /* BulletManager.h */,
+				8A91DDBD17FEB8B60030DD34 /* BulletManager.m */,
 				8A4CE7EC17FD8F1B00241E1F /* AppDelegate.mm */,
 				8A4CE7EE17FD8F1B00241E1F /* HelloWorldLayer.h */,
 				8A4CE7EF17FD8F1B00241E1F /* HelloWorldLayer.mm */,
@@ -1323,6 +1335,7 @@
 				8A4CE68F17FD8F1A00241E1F /* CCSprite.m in Sources */,
 				8A4CE7B517FD8F1B00241E1F /* b2EdgeAndCircleContact.cpp in Sources */,
 				8A4CE63617FD8F1900241E1F /* CCGrabber.m in Sources */,
+				8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */,
 				8A4CE74017FD8F1B00241E1F /* mat3.c in Sources */,
 				8A4CE78517FD8F1B00241E1F /* b2Math.cpp in Sources */,
 				8A4CE6CA17FD8F1A00241E1F /* CCES2Renderer.m in Sources */,
@@ -1366,6 +1379,7 @@
 				8A4CE7E417FD8F1B00241E1F /* b2Rope.cpp in Sources */,
 				8A4CE70F17FD8F1A00241E1F /* CDAudioManager.m in Sources */,
 				8A4CE76317FD8F1B00241E1F /* b2Collision.cpp in Sources */,
+				8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */,
 				8A4CE6BC17FD8F1A00241E1F /* CCTransitionProgress.m in Sources */,
 				8A4CE6DF17FD8F1A00241E1F /* CCGLView.m in Sources */,
 				8A4CE71317FD8F1A00241E1F /* CDOpenALSupport.m in Sources */,

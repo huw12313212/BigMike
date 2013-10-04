@@ -13,6 +13,7 @@
 #import "cocos2d.h"
 #import "Box2D.h"
 #import "GLES-Render.h"
+#import "BulletManager.h"
 
 //Pixel to metres ratio. Box2D uses metres as the unit for measurement.
 //This ratio defines how many pixels correspond to 1 Box2D "metre"
@@ -25,9 +26,15 @@
 {
 	CCTexture2D *spriteTexture_;	// weak ref
     CCLabelTTF *fly;
+    //BulletManager *bulletManager;
+    //NSMutableArray
 }
+
+@property (nonatomic,strong)BulletManager* bulletManager;
 
 // returns a CCScene that contains the HelloWorldLayer as the only child
 +(CCScene *) scene;
+
+
 
 @end

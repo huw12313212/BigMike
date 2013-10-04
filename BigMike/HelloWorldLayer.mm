@@ -14,6 +14,8 @@
 
 // Needed to obtain the Navigation Controller
 #import "AppDelegate.h"
+#import "Constants.h"
+
 
 
 enum {
@@ -52,10 +54,13 @@ enum {
 {
 	if( (self=[super init])) {
 		
+        self.bulletManager = [[BulletManager alloc]init:self];
+        
 		// enable events
 		
 		self.touchEnabled = YES;
 		self.accelerometerEnabled = YES;
+        
 		CGSize s = [CCDirector sharedDirector].winSize;
 		
 
@@ -72,9 +77,10 @@ enum {
 		
 		
         
-        fly = [CCLabelTTF labelWithString:@"艦" fontName:@"Marker Felt" fontSize:32];
-        
+        fly = [CCLabelTTF labelWithString:@"艦" fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
         [self addChild:fly];
+        
+        
         [fly setColor:ccc3(0,0,255)];
         fly.position = ccp( s.width/2, s.height-50);
 		
@@ -168,6 +174,8 @@ enum {
 	
     [self correctPlayerPosition];
     
+    [self.bulletManager update:dt withPoint:[fly position]];
+    
 }
 
 -(void)correctPlayerPosition
@@ -178,8 +186,8 @@ enum {
     if(nowPositionX<0)nowPositionX = 0;
     if(nowPositionY<0)nowPositionY = 0;
     
-    if(nowPositionX>480)nowPositionX = 480;
-    if(nowPositionY>320)nowPositionY = 320;
+    if(nowPositionX>SCREEN_WIDTH)nowPositionX = SCREEN_WIDTH;
+    if(nowPositionY>SCREEN_HEIGHT)nowPositionY = SCREEN_HEIGHT;
     
     [fly setPosition:ccp(nowPositionX,nowPositionY)];
     
