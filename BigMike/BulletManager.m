@@ -9,6 +9,7 @@
 #import "BulletManager.h"
 #import "Constants.h"
 #import "Bullet.h"
+#import "Enemy.h"
 
 @implementation BulletManager
 {
@@ -59,7 +60,39 @@
     {
         [bullet update:dt];
     }
+}
+
+-(void)checkBulletHitEnemy:(EnemyManager*)enemyManager
+{
+    NSMutableArray* enemyArray = enemyManager.nowAliveEnemies;
     
+    for(Bullet* bullet in self.BulletArray)
+    {
+        for(Enemy* enemy in enemyArray)
+        {
+            if(bullet->isShooted)
+            {
+                if(enemy->isAlive)
+                {
+                    if([BulletManager isHited:bullet.bulletTexture.boundingBox :enemy.enemyLabel.boundingBox ])
+                    {
+                        
+                            [bullet removeBullet];
+                            [enemy BulletHit];
+                        
+                        
+                        break;
+                    }
+                }
+            }
+        }
+    }
+}
+
++(bool)isHited:(CGRect)A:(CGRect)B
+{
+    
+   return CGRectIntersectsRect(A, B);
 }
 
 -(void)ShootABullet:(CGPoint) position

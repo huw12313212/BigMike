@@ -9,6 +9,7 @@
 
 @interface Bullet : NSObject
 {
+    @public
     Boolean isShooted;
     CGPoint velicity;
 }
@@ -19,4 +20,6 @@
 -(id)init : (CCNode*)parent;
 -(void)shootFromPosition:(CGPoint) point;
 -(void)update: (ccTime) dt;
+-(void)removeBullet;
+
 @end

@@ -48,4 +48,9 @@
     }
 }
 
+-(void)BulletHit
+{
+    isAlive = false;
+}
+
 @end

@@ -19,6 +19,7 @@
 
 -(id)init : (CCNode*) parent :(NSString*) str;
 -(void)update:(ccTime)dt;
+-(void)BulletHit;
 @property (nonatomic,strong) EnemyPath* path;
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic, strong)CCLabelTTF* enemyLabel;
