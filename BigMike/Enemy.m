@@ -20,9 +20,13 @@
     
     [self.enemyLabel setPosition: position];
     
-    if(time >= self.path->maxLifeTime)
+    if(self.path->isLimitedLife)
     {
-        isAlive = false;
+    
+        if(time >= self.path->maxLifeTime)
+        {
+            isAlive = false;
+        }
     }
 }
 
