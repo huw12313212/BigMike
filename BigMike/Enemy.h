@@ -14,6 +14,7 @@
     @public
     float time;
     Boolean isAlive;
+    NSInteger hp;
     
 }
 

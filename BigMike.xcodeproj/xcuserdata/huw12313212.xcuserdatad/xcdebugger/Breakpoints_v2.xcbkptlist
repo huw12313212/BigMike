@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigMike/Enemy.h"
-            timestampString = "402654956.17648"
+            timestampString = "402669385.44085"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "27"
-            endingLineNumber = "27"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "@interface Enemy"
             landmarkType = "2">
          </BreakpointContent>

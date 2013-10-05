@@ -36,9 +36,12 @@
     {
         isAlive = true;
         time = 0;
+        hp = ENEMY_HP;
+        
         
         self.parentNode = parent;
-        self.enemyLabel = [CCLabelTTF labelWithString: str fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
+        self.enemyLabel = [CCLabelTTF labelWithString: str fontName:DEFAULT_FONT fontSize:ENEMY_SIZE];
+        [self.enemyLabel setColor:ENEMY_START_COLOR];
  
         return self;
     }
@@ -50,7 +53,22 @@
 
 -(void)BulletHit
 {
-    isAlive = false;
+    hp--;
+    
+    float ratio = (float)hp/ENEMY_HP;
+    
+    ccColor3B color;
+    color.r = ENEMY_START_COLOR.r * ratio + ENEMY_DEAD_COLOR.r *(1-ratio);
+    color.g = ENEMY_START_COLOR.g * ratio + ENEMY_DEAD_COLOR.g *(1-ratio);
+    color.b = ENEMY_START_COLOR.b * ratio + ENEMY_DEAD_COLOR.b *(1-ratio);
+    
+    
+    [self.enemyLabel setColor:color];
+    
+    if(hp==0)
+    {
+        isAlive = false;
+    }
 }
 
 @end

@@ -43,6 +43,12 @@
 #define GROUND_SIZE_SMALLEST 18
 
 #define ENEMY_PADDING 0.2f
+#define ENEMY_SIZE 32
+#define ENEMY_START_COLOR ccc3(255,0,255)
+#define ENEMY_DEAD_COLOR ccc3(255,0,0)
+#define ENEMY_HP 3
+
+
 
 
 #endif
