@@ -10,6 +10,7 @@
 //Bézier curve
 
 #import "BezierCurve2Path.h"
+#import "Constants.h"
 
 
 @implementation BezierCurve2Path
@@ -22,9 +23,9 @@
         maxLifeTime = 6;
         
         srandom(time(NULL));
-        P0.x = 480, P0.y = rand()%320;
-        P2.x = 0, P2.y = rand()%320;
-        P1.x = rand()%480, P1.y = rand()%320;
+        P0.x = SCREEN_WIDTH, P0.y = rand()%SCREEN_HEIGHT;
+        P2.x = 0, P2.y = rand()%SCREEN_HEIGHT;
+        P1.x = rand()%SCREEN_WIDTH, P1.y = rand()%SCREEN_HEIGHT;
         
         return self;
     }
@@ -39,11 +40,11 @@
 {
     
     if (nowTime>0){
-        if (abs(nowTime)<=maxLifeTime)
-            t = fabs(nowTime);
-        else
-            t = fabs(nowTime)-maxLifeTime;
-        
+//        if (abs(nowTime)<=maxLifeTime)
+//            t = fabs(nowTime)/maxLifeTime;
+//        else
+//            t = (fabs(nowTime)-maxLifeTime)/maxLifeTime;
+        t = nowTime/maxLifeTime;
         float X = (1-t)*(1-t)*P0.x + 2*t*(1-t)*P1.x + t*t*P2.x;
         float Y = (1-t)*(1-t)*P0.y + 2*t*(1-t)*P1.y + t*t*P2.y;
         

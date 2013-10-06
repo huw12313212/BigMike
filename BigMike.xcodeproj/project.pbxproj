@@ -198,6 +198,9 @@
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
 		E0BD233418013A12004160C4 /* EnemyPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233318013A12004160C4 /* EnemyPathManager.m */; };
 		E0BD2337180148C8004160C4 /* SinPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD2336180148C8004160C4 /* SinPath.m */; };
+		E0BD233A18014EEC004160C4 /* EnemyPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233918014EEC004160C4 /* EnemyPath1.m */; };
+		E0BD233D180152A4004160C4 /* Sin2Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233C180152A4004160C4 /* Sin2Path.m */; };
+		E0BD234018015748004160C4 /* NormalPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233F18015748004160C4 /* NormalPath1.m */; };
 		E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CE817FFEDA00038A390 /* CirclePath.m */; };
 		E0DA5CEC180045AF0038A390 /* BezierCurve2Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */; };
 /* End PBXBuildFile section */
@@ -602,6 +605,12 @@
 		E0BD233318013A12004160C4 /* EnemyPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPathManager.m; sourceTree = "<group>"; };
 		E0BD2335180148C8004160C4 /* SinPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinPath.h; sourceTree = "<group>"; };
 		E0BD2336180148C8004160C4 /* SinPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinPath.m; sourceTree = "<group>"; };
+		E0BD233818014EEC004160C4 /* EnemyPath1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath1.h; sourceTree = "<group>"; };
+		E0BD233918014EEC004160C4 /* EnemyPath1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath1.m; sourceTree = "<group>"; };
+		E0BD233B180152A4004160C4 /* Sin2Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sin2Path.h; sourceTree = "<group>"; };
+		E0BD233C180152A4004160C4 /* Sin2Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sin2Path.m; sourceTree = "<group>"; };
+		E0BD233E18015748004160C4 /* NormalPath1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalPath1.h; sourceTree = "<group>"; };
+		E0BD233F18015748004160C4 /* NormalPath1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPath1.m; sourceTree = "<group>"; };
 		E0DA5CE717FFEDA00038A390 /* CirclePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclePath.h; sourceTree = "<group>"; };
 		E0DA5CE817FFEDA00038A390 /* CirclePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclePath.m; sourceTree = "<group>"; };
 		E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve2Path.h; sourceTree = "<group>"; };
@@ -1237,8 +1246,14 @@
 				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
 				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
 				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
+				E0BD233818014EEC004160C4 /* EnemyPath1.h */,
+				E0BD233918014EEC004160C4 /* EnemyPath1.m */,
 				E0BD2335180148C8004160C4 /* SinPath.h */,
 				E0BD2336180148C8004160C4 /* SinPath.m */,
+				E0BD233B180152A4004160C4 /* Sin2Path.h */,
+				E0BD233C180152A4004160C4 /* Sin2Path.m */,
+				E0BD233E18015748004160C4 /* NormalPath1.h */,
+				E0BD233F18015748004160C4 /* NormalPath1.m */,
 				E0DA5CE717FFEDA00038A390 /* CirclePath.h */,
 				E0DA5CE817FFEDA00038A390 /* CirclePath.m */,
 				E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */,
@@ -1367,6 +1382,7 @@
 			files = (
 				8A4CE6A417FD8F1A00241E1F /* CCTexturePVR.m in Sources */,
 				8A4CE6F417FD8F1A00241E1F /* ccUtils.c in Sources */,
+				E0BD233A18014EEC004160C4 /* EnemyPath1.m in Sources */,
 				8A4CE64517FD8F1900241E1F /* CCLayer.m in Sources */,
 				8A4CE77017FD8F1B00241E1F /* b2ChainShape.cpp in Sources */,
 				8A4CE6A717FD8F1A00241E1F /* CCTileMapAtlas.m in Sources */,
@@ -1474,6 +1490,7 @@
 				8A4CE60B17FD8F1900241E1F /* CCAnimation.m in Sources */,
 				8A4CE73617FD8F1B00241E1F /* aabb.c in Sources */,
 				8A4CE6AD17FD8F1A00241E1F /* CCTMXObjectGroup.m in Sources */,
+				E0BD233D180152A4004160C4 /* Sin2Path.m in Sources */,
 				8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */,
 				8A91DDC117FED7A60030DD34 /* Player.m in Sources */,
 				8A4CE7B817FD8F1B00241E1F /* b2EdgeAndPolygonContact.cpp in Sources */,
@@ -1514,6 +1531,7 @@
 				8A4CE6E217FD8F1A00241E1F /* CCWindow.m in Sources */,
 				8A4CE78817FD8F1B00241E1F /* b2Settings.cpp in Sources */,
 				8A4CE6C017FD8F1A00241E1F /* cocos2d.m in Sources */,
+				E0BD234018015748004160C4 /* NormalPath1.m in Sources */,
 				8A4CE66D17FD8F1A00241E1F /* CCProgressTimer.m in Sources */,
 				8A4CE77E17FD8F1B00241E1F /* b2BlockAllocator.cpp in Sources */,
 				8A4CE64217FD8F1900241E1F /* CCLabelTTF.m in Sources */,

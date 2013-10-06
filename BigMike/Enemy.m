@@ -16,13 +16,21 @@
 {
     time += dt;
     
+    
+    if(time<0)
+    {
+            [self.enemyLabel setPosition: ccp(-100,0)];
+    }
+    else
+    {
     CGPoint position =[self.path GetPosition:time];
     
     [self.enemyLabel setPosition: position];
+    }
     
     if(self.path->isLimitedLife)
     {
-    
+       
         if(time >= self.path->maxLifeTime)
         {
             isAlive = false;

@@ -11,6 +11,8 @@
 #import "SinPath.h"
 #import "BezierCurve2Path.h"
 #import "CirclePath.h"
+#import "Sin2Path.h"
+#import "NormalPath1.h"
 
 
 @implementation EnemyPathManager
@@ -26,8 +28,11 @@
     
 //    [self.candidatePaths addObject:[[EnemyPath alloc]init]];
 //    [self.candidatePaths addObject:[[SinPath alloc]init]];
+//    [self.candidatePaths addObject:[[Sin2Path alloc]init]];
+            [self.candidatePaths addObject:[[NormalPath1 alloc]init]];
 //        [self.candidatePaths addObject:[[BezierCurve2Path alloc]init]];
-        [self.candidatePaths addObject:[[CirclePath alloc]init]];
+//        [self.candidatePaths addObject:[[CirclePath alloc]init]];
+
         
         
         return self;
