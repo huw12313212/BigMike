@@ -14,12 +14,14 @@
     @public
     float time;
     Boolean isAlive;
+    NSInteger hp;
     
 }
 
 -(id)init : (CCNode*) parent :(NSString*) str;
 -(void)update:(ccTime)dt;
 @property (nonatomic,strong) EnemyPath1* path;
+-(void)BulletHit;
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic, strong)CCLabelTTF* enemyLabel;
 

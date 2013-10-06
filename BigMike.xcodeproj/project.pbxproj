@@ -1304,6 +1304,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "王 瀚宇";
+				TargetAttributes = {
+					8A4CE5AF17FD8F1900241E1F = {
+						DevelopmentTeam = QKNZ2N2P2F;
+					};
+				};
 			};
 			buildConfigurationList = 8A4CE5AB17FD8F1900241E1F /* Build configuration list for PBXProject "BigMike" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1568,6 +1573,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1579,12 +1586,15 @@
 				);
 				HEADER_SEARCH_PATHS = "\"BigMike/libs/kazmath/include\"";
 				INFOPLIST_FILE = BigMike/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"BigMike/libs\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1594,6 +1604,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = BigMike/Prefix.pch;
@@ -1604,12 +1616,15 @@
 				);
 				HEADER_SEARCH_PATHS = "\"BigMike/libs/kazmath/include\"";
 				INFOPLIST_FILE = BigMike/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"BigMike/libs\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

@@ -104,6 +104,7 @@ enum {
     [self.bulletManager update:dt withPoint:[self.player position]];
     [self.player update:dt];
     [self.enemyManager update:dt];
+    [self.bulletManager checkBulletHitEnemy:self.enemyManager];
     
 }
 

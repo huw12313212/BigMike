@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "EnemyManager.h"
 
 @interface BulletManager : NSObject
 {
@@ -15,6 +16,8 @@
 
 -(id)init :(CCNode*) parent;
 -(void)update:(ccTime) dt withPoint : (CGPoint)position;
+-(void)checkBulletHitEnemy:(EnemyManager*)enemyManager;
++(bool)isHited:(CGRect)A:(CGRect)B;
 
 @property (nonatomic,strong)NSMutableArray* BulletArray;
 
