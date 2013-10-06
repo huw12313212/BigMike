@@ -16,7 +16,7 @@
 {
     if(self = [super init])
     {
-        isLimitedLife = true;
+        isLimitedLife = false;
         maxLifeTime = 6;
 /*
         srandom(time(NULL));
@@ -36,13 +36,34 @@
 
 -(CGPoint) GetPosition:(float) nowTime
 {
-    float radius = 100;
+    float EnterTime = 2;
     
-    CGPoint center = ccp(SCREEN_WIDTH/2,SCREEN_HEIGHT/2);
+    float radius = 100;
+      CGPoint center = ccp(SCREEN_WIDTH/2,SCREEN_HEIGHT/2);
+    
+    if(nowTime>EnterTime)
+    {
+  
     
     float X = radius * cos(nowTime)+center.x;
     float Y = radius * sin(nowTime)+center.y;
-    
+           return ccp(X,Y);
+    }
+    else
+    {
+        float TargetX =radius * cos(EnterTime)+center.x;
+        float TargetY =radius * sin(EnterTime)+center.y;
+        
+        float ShootX = SCREEN_WIDTH;
+        float ShootY = SCREEN_HEIGHT;
+        
+        float ratio = nowTime/EnterTime;
+        
+        float nowX = TargetX * ratio + (1-ratio)*ShootX;
+        float nowY = TargetY * ratio + (1-ratio)*ShootY;
+        
+           return ccp(nowX,nowY);
+    }
     /*
     if (abs(nowTime)<=maxLifeTime)
         t = fabs(nowTime);
@@ -58,7 +79,7 @@
     */
     
     
-    return ccp(X,Y);
+ 
 }
 
 

@@ -196,6 +196,7 @@
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
+		E0BD233418013A12004160C4 /* EnemyPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233318013A12004160C4 /* EnemyPathManager.m */; };
 		E0DA5CE917FFEDA00038A390 /* EnemyPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CE817FFEDA00038A390 /* EnemyPath1.m */; };
 		E0DA5CEC180045AF0038A390 /* EnemyPath2.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CEB180045AF0038A390 /* EnemyPath2.m */; };
 /* End PBXBuildFile section */
@@ -596,6 +597,8 @@
 		8A91DDBD17FEB8B60030DD34 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
 		8A91DDBF17FED7A60030DD34 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		8A91DDC017FED7A60030DD34 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		E0BD233218013A12004160C4 /* EnemyPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPathManager.h; sourceTree = "<group>"; };
+		E0BD233318013A12004160C4 /* EnemyPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPathManager.m; sourceTree = "<group>"; };
 		E0DA5CE717FFEDA00038A390 /* EnemyPath1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath1.h; sourceTree = "<group>"; };
 		E0DA5CE817FFEDA00038A390 /* EnemyPath1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath1.m; sourceTree = "<group>"; };
 		E0DA5CEA180045AF0038A390 /* EnemyPath2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath2.h; sourceTree = "<group>"; };
@@ -1237,6 +1240,8 @@
 				E0DA5CEB180045AF0038A390 /* EnemyPath2.m */,
 				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
 				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
+				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
+				E0BD233318013A12004160C4 /* EnemyPathManager.m */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -1398,6 +1403,7 @@
 				8A4CE66117FD8F1A00241E1F /* CCParticleSystem.m in Sources */,
 				8A4CE6B617FD8F1A00241E1F /* CCTransition.m in Sources */,
 				8A4CE76917FD8F1B00241E1F /* b2DynamicTree.cpp in Sources */,
+				E0BD233418013A12004160C4 /* EnemyPathManager.m in Sources */,
 				8A4CE79517FD8F1B00241E1F /* b2ContactManager.cpp in Sources */,
 				8A4CE65E17FD8F1A00241E1F /* CCParticleExamples.m in Sources */,
 				8A4CE65B17FD8F1A00241E1F /* CCParticleBatchNode.m in Sources */,

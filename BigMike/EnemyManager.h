@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 #import "ArticleAnalysis.h"
+#import "EnemyPathManager.h"
 
 @interface EnemyManager : NSObject
 {
@@ -20,6 +21,7 @@
 
 @property (nonatomic,assign)ArticleAnalysis* nowArticleAnaysis;
 @property (nonatomic,assign)CCNode* parentNode;
+@property (nonatomic,strong)EnemyPathManager* enemyPathManager;
 
 -(id)init : (CCNode*) parent;
 

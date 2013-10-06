@@ -8,7 +8,10 @@
 
 #import "EnemyManager.h"
 #import "Enemy.h"
+#import "EnemyPath.h"
+#import "EnemyPath1.h"
 #import "Constants.h"
+#import "EnemyPathManager.h"
 
 
 @implementation EnemyManager
@@ -19,7 +22,9 @@
     {
         if([self isAllDead])
         {
-            EnemyPath1* path = [[EnemyPath1 alloc]init];
+            
+            
+            EnemyPath* path = [self.enemyPathManager RandomProducePath];
             
             
             NSString* nextLine = [self.nowArticleAnaysis GetNextLine];
@@ -65,6 +70,7 @@
      self.parentNode = parent;
      self.nowAliveEnemies = [[NSMutableArray alloc]init];
      self.trashEnemies =[[NSMutableArray alloc]init];
+        self.enemyPathManager = [[EnemyPathManager alloc]init];
         
      return self;
     }
