@@ -16,10 +16,12 @@
 
 @property (nonatomic,strong)CCLabelTTF *bulletTexture;
 
+@property (nonatomic,strong)CCLabelTTF *bulletTextureGray;
+
 
 -(id)init : (CCNode*)parent;
 -(void)shootFromPosition:(CGPoint) point;
 -(void)update: (ccTime) dt;
--(void)removeBullet;
+-(void)removeBullet:(Boolean)grayEffect;
 
 @end

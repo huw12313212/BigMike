@@ -1,4 +1,4 @@
-//
+
 //  HelloWorldLayer.mm
 //  BigMike
 //
@@ -37,13 +37,23 @@ enum {
 +(CCScene *) scene
 {
 	// 'scene' is an autorelease object.
+    
+
+    
 	CCScene *scene = [CCScene node];
 	
 	// 'layer' is an autorelease object.
 	HelloWorldLayer *layer = [HelloWorldLayer node];
+    
+   //BackGround Color
+   // CCLayerColor *colorLayer = [CCLayerColor layerWithColor:ccc4(255, 255, 255,255)];
+    //[scene addChild:colorLayer];
 	
 	// add layer as a child to scene
 	[scene addChild: layer];
+    
+    
+
     
 	
 	// return the scene

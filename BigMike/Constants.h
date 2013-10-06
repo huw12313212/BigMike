@@ -17,16 +17,19 @@
 
 #define BULLET_SIZE 16
 #define BULLET_WORD @"彈"
+#define BULLET_GRAY_WORD @"火"
 #define BULLET_OUTSIDE_PADDING 30
 #define BULLET_MAX_COUNT 30
 #define BULLET_FREQUENCY 8
 #define BULLET_SPEED 8
-#define BULLET_COLOR ccc3(0,0,255)
+#define BULLET_COLOR ccc3(200,255,200)
 #define BULLET_OFFSET ccp(10,0)
+#define BULLET_GRAY_COLOR ccc3(201,76,18)
+
 
 #define PLAYER_WORD @"艦"
 #define PLAYER_SIZE 32
-#define PLAYER_COLOR ccc3(0,0,255)
+#define PLAYER_COLOR ccc3(129,171,240)
 #define PLAYER_POSITION ccp(40,160)
 
 #define GROUND_WORD1 @"街"

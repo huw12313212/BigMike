@@ -77,7 +77,7 @@
                     if([BulletManager isHited:bullet.bulletTexture.boundingBox :enemy.enemyLabel.boundingBox ])
                     {
                         
-                            [bullet removeBullet];
+                            [bullet removeBullet : true];
                             [enemy BulletHit];
                         
                         
