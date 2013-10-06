@@ -196,6 +196,8 @@
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
+		E0DA5CE917FFEDA00038A390 /* EnemyPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CE817FFEDA00038A390 /* EnemyPath1.m */; };
+		E0DA5CEC180045AF0038A390 /* EnemyPath2.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CEB180045AF0038A390 /* EnemyPath2.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -594,6 +596,10 @@
 		8A91DDBD17FEB8B60030DD34 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
 		8A91DDBF17FED7A60030DD34 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		8A91DDC017FED7A60030DD34 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		E0DA5CE717FFEDA00038A390 /* EnemyPath1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath1.h; sourceTree = "<group>"; };
+		E0DA5CE817FFEDA00038A390 /* EnemyPath1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath1.m; sourceTree = "<group>"; };
+		E0DA5CEA180045AF0038A390 /* EnemyPath2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPath2.h; sourceTree = "<group>"; };
+		E0DA5CEB180045AF0038A390 /* EnemyPath2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath2.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1225,6 +1231,10 @@
 				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
 				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
 				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
+				E0DA5CE717FFEDA00038A390 /* EnemyPath1.h */,
+				E0DA5CE817FFEDA00038A390 /* EnemyPath1.m */,
+				E0DA5CEA180045AF0038A390 /* EnemyPath2.h */,
+				E0DA5CEB180045AF0038A390 /* EnemyPath2.m */,
 				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
 				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
 			);
@@ -1368,6 +1378,7 @@
 				8A4CE63F17FD8F1900241E1F /* CCLabelBMFont.m in Sources */,
 				8A4CE7C817FD8F1B00241E1F /* b2GearJoint.cpp in Sources */,
 				8A4CE6EC17FD8F1A00241E1F /* ccCArray.m in Sources */,
+				E0DA5CEC180045AF0038A390 /* EnemyPath2.m in Sources */,
 				8A4CE71617FD8F1A00241E1F /* CDXMacOSXSupport.m in Sources */,
 				8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */,
 				8A4CE70A17FD8F1A00241E1F /* ZipUtils.m in Sources */,
@@ -1495,6 +1506,7 @@
 				8A4CE69217FD8F1A00241E1F /* CCSpriteBatchNode.m in Sources */,
 				8A4CE61B17FD8F1900241E1F /* CCConfiguration.m in Sources */,
 				8A4CE67717FD8F1A00241E1F /* CCScheduler.m in Sources */,
+				E0DA5CE917FFEDA00038A390 /* EnemyPath1.m in Sources */,
 				8A4CE6C717FD8F1A00241E1F /* CCDirectorIOS.m in Sources */,
 				8A4CE64917FD8F1900241E1F /* CCMenu.m in Sources */,
 				8A4CE75217FD8F1B00241E1F /* vec4.c in Sources */,

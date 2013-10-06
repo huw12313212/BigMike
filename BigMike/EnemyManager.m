@@ -19,7 +19,7 @@
     {
         if([self isAllDead])
         {
-            EnemyPath* path = [[EnemyPath alloc]init];
+            EnemyPath1* path = [[EnemyPath1 alloc]init];
             
             
             NSString* nextLine = [self.nowArticleAnaysis GetNextLine];

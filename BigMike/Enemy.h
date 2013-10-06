@@ -6,7 +6,7 @@
 //  Copyright (c) 2013年 王 瀚宇. All rights reserved.
 //
 
-#import "EnemyPath.h"
+#import "EnemyPath1.h"
 #import <Foundation/Foundation.h>
 
 @interface Enemy : NSObject
@@ -19,7 +19,7 @@
 
 -(id)init : (CCNode*) parent :(NSString*) str;
 -(void)update:(ccTime)dt;
-@property (nonatomic,strong) EnemyPath* path;
+@property (nonatomic,strong) EnemyPath1* path;
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic, strong)CCLabelTTF* enemyLabel;
 
