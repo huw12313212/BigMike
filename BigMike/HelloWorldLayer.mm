@@ -56,7 +56,7 @@ enum {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
         self.player = [[Player alloc]init:self];
-        //self.articleAnalysis = [[ArticleAnalysis alloc]init];
+        self.articleAnalysis = [[ArticleAnalysis alloc]init];
         self.enemyManager = [[EnemyManager alloc]init:self];
         [self.enemyManager setNowArticleAnaysis:self.articleAnalysis];
         
@@ -109,8 +109,8 @@ enum {
 }
 
 -(void)creatGround:(int)line{
-    //GroundWord *ground = [[GroundWord alloc] init:line];
-    //[self addChild:ground z:-100];
+    GroundWord *ground = [[GroundWord alloc] init:line];
+    [self addChild:ground z:-100];
 }
 
 
