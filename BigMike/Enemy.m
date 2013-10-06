@@ -62,12 +62,52 @@
     color.g = ENEMY_START_COLOR.g * ratio + ENEMY_DEAD_COLOR.g *(1-ratio);
     color.b = ENEMY_START_COLOR.b * ratio + ENEMY_DEAD_COLOR.b *(1-ratio);
     
-    
     [self.enemyLabel setColor:color];
+    
+    
     
     if(hp==0)
     {
-        isAlive = false;
+        CCActionTween* scaleAction= [CCActionTween actionWithDuration:ENEMY_PRE_DURATION key:@"scale" from:self.enemyLabel.scale to:ENEMY_HIT_SCALE];
+        CCEaseIn* ease =[CCEaseIn actionWithAction:scaleAction rate:2];
+        
+        CCActionTween* scaleAction2= [CCActionTween actionWithDuration:ENEMY_POST_DURATION key:@"scale" from:ENEMY_HIT_SCALE to:0];
+        CCEaseIn* ease2=[CCEaseIn actionWithAction:scaleAction2 rate:2];
+        
+        
+        CCCallFuncN* call = [CCCallBlock actionWithBlock:^
+        {
+             isAlive = false;
+        }
+        ];
+        
+        CCSequence* sequence = [CCSequence actions:
+                                ease,
+                                ease2,
+                                call,
+                                nil];
+        
+       
+         [self.enemyLabel runAction:sequence];
+    }
+    else
+    {
+        
+        CCActionTween* scaleAction= [CCActionTween actionWithDuration:ENEMY_PRE_DURATION key:@"scale" from:self.enemyLabel.scale to:ENEMY_HIT_SCALE];
+        
+        CCEaseInOut* ease =[CCEaseInOut actionWithAction:scaleAction rate:2];
+        
+        CCActionTween* scaleAction2= [CCActionTween actionWithDuration:ENEMY_POST_DURATION key:@"scale" from:ENEMY_HIT_SCALE to:1.0];
+        CCEaseInOut* ease2=[CCEaseInOut actionWithAction:scaleAction2 rate:2];
+
+
+        CCSequence* sequence = [CCSequence actions:
+                                ease,
+                                ease2,
+                                nil];
+        
+        
+        [self.enemyLabel runAction:sequence];
     }
 }
 
