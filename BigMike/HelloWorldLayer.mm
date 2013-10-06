@@ -72,7 +72,7 @@ enum {
 
 -(void) dealloc
 {
-	[super dealloc];
+
 }	
 
 
@@ -109,8 +109,8 @@ enum {
 }
 
 -(void)creatGround:(int)line{
-    //GroundWord *ground = [[GroundWord alloc] init:line];
-    //[self addChild:ground z:-100];
+    GroundWord *ground = [[GroundWord alloc] init:line];
+    [self addChild:ground z:-100];
 }
 
 

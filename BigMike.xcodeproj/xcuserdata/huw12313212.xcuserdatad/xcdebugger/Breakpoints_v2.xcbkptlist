@@ -115,11 +115,11 @@
                   symbolName = "-[EnemyManager nowAliveEnemies]"
                   moduleName = "BigMike"
                   urlString = "file://localhost/Users/huw12313212/BigMike/BigMike/EnemyManager.h"
-                  timestampString = "402601291.026961"
+                  timestampString = "402742876.371211"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
                   offsetFromSymbolStart = "24">
                </Location>
                <Location
@@ -129,14 +129,30 @@
                   symbolName = "-[EnemyManager setNowAliveEnemies:]"
                   moduleName = "BigMike"
                   urlString = "file://localhost/Users/huw12313212/BigMike/BigMike/EnemyManager.h"
-                  timestampString = "402601291.02746"
+                  timestampString = "402742876.371785"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "18"
-                  endingLineNumber = "18"
-                  offsetFromSymbolStart = "37">
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "31">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "BigMike/ArticleAnalysis.m"
+            timestampString = "402742740.839048"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "-init"
+            landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

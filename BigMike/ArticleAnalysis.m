@@ -39,8 +39,7 @@
     self.sentenceArray = [self.content componentsSeparatedByCharactersInSet:[NSCharacterSet characterSetWithCharactersInString:@"，。"]];
     
     
-    
-    CCLOG(@"sentence length %d",[self.sentenceArray count]);
+        CCLOG(@"sentence length %d",[self.sentenceArray count]);
         
         return self;
     }

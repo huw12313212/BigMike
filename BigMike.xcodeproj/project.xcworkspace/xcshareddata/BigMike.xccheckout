@@ -5,34 +5,34 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>3181B74D-2F39-4508-9553-EE51F67D303C</string>
+	<string>33AC26EF-C2BA-40ED-9319-F00387DD8585</string>
 	<key>IDESourceControlProjectName</key>
 	<string>BigMike</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>24B7A5A1-DC0C-4986-A060-051058F45F79</key>
-		<string>https://github.com/huw12313212/BigMike</string>
+		<key>87340202-2599-4988-9903-E4E4BCA67299</key>
+		<string>https://github.com/huw12313212/BigMike.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>BigMike.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>24B7A5A1-DC0C-4986-A060-051058F45F79</key>
+		<key>87340202-2599-4988-9903-E4E4BCA67299</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/huw12313212/BigMike</string>
+	<string>https://github.com/huw12313212/BigMike.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>24B7A5A1-DC0C-4986-A060-051058F45F79</string>
+	<string>87340202-2599-4988-9903-E4E4BCA67299</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>24B7A5A1-DC0C-4986-A060-051058F45F79</string>
+			<string>87340202-2599-4988-9903-E4E4BCA67299</string>
 			<key>IDESourceControlWCCName</key>
 			<string>BigMike</string>
 		</dict>

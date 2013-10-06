@@ -46,6 +46,8 @@
 -(void)removeBullet
 {
     isShooted = false;
+    
+    
     [self.bulletTexture removeFromParent];
 }
 

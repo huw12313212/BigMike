@@ -46,8 +46,10 @@
 #define ENEMY_SIZE 32
 #define ENEMY_START_COLOR ccc3(255,0,255)
 #define ENEMY_DEAD_COLOR ccc3(255,0,0)
-#define ENEMY_HP 3
-
+#define ENEMY_HP 2
+#define ENEMY_HIT_SCALE 1.3
+#define ENEMY_PRE_DURATION 0.05
+#define ENEMY_POST_DURATION 0.05
 
 
 
