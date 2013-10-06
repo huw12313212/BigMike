@@ -15,7 +15,6 @@
 #import "NormalPath1.h"
 #import "NormalPath2.h"
 #import "NormalPath3.h"
-
 @implementation EnemyPathManager
 
 
@@ -27,7 +26,7 @@
     self.candidatePaths = [[NSMutableArray alloc]init];
     
     
-    [self.candidatePaths addObject:[[EnemyPath alloc]init]];
+        [self.candidatePaths addObject:[[EnemyPath alloc]init:true]];
     [self.candidatePaths addObject:[[SinPath alloc]init]];
     [self.candidatePaths addObject:[[Sin2Path alloc]init]];
         [self.candidatePaths addObject:[[NormalPath1 alloc]init: true]];
@@ -55,6 +54,8 @@
     
     
     int randNumber = rand()%Total;
+    
+    NSLog(@"path number %d",randNumber);
     
     return (EnemyPath*)self.candidatePaths[randNumber];
     

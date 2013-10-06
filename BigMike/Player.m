@@ -41,6 +41,8 @@
 {
     CGPoint newPosition = ccpAdd([self position],Dif);
     [self.playerLabel setPosition:newPosition];
+    
+    CCLOG(@"Player position:(%f,%f)",newPosition.x,newPosition.y);
 }
 
 -(void)update :(ccTime)dt
@@ -57,7 +59,7 @@
     if(nowPositionY<0)nowPositionY = 0;
     
     if(nowPositionX>SCREEN_WIDTH)nowPositionX = SCREEN_WIDTH;
-    if(nowPositionY>SCREEN_HEIGHT)nowPositionY = SCREEN_HEIGHT;
+    if(nowPositionY>SCREEN_HEIGHT-PLAYER_SIZE/2)nowPositionY = SCREEN_HEIGHT-PLAYER_SIZE/2;
     
     [self.playerLabel setPosition:ccp(nowPositionX,nowPositionY)];
 }
