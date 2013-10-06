@@ -89,17 +89,17 @@ enum {
 
 -(void) update: (ccTime) dt
 {
-//    creatTime += dt;
-//	if (creatTime>0.2) {
-//        creatTime = 0;
-//        [self creatGround:0];
-//        [self creatGround:1];
-//        [self creatGround:2];
-//        [self creatGround:3];
-//        [self creatGround:4];
-//        [self creatGround:5];
-//        [self creatGround:6];
-//    }
+    creatTime += dt;
+	if (creatTime>0.2) {
+        creatTime = 0;
+        [self creatGround:0];
+        [self creatGround:1];
+        [self creatGround:2];
+        [self creatGround:3];
+        [self creatGround:4];
+        [self creatGround:5];
+        [self creatGround:6];
+    }
     
     [self.bulletManager update:dt withPoint:[self.player position]];
     [self.player update:dt];
