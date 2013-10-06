@@ -9,7 +9,6 @@
 #import "EnemyManager.h"
 #import "Enemy.h"
 #import "EnemyPath.h"
-#import "EnemyPath1.h"
 #import "Constants.h"
 #import "EnemyPathManager.h"
 
@@ -25,7 +24,6 @@
             
             
             EnemyPath* path = [self.enemyPathManager RandomProducePath];
-            
             
             NSString* nextLine = [self.nowArticleAnaysis GetNextLine];
             

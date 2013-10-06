@@ -1,17 +1,14 @@
 //
-//  EnemyPath.m
+//  SinPath.m
 //  BigMike
 //
-//  Created by 王 瀚宇 on 13/10/4.
+//  Created by Thomas on 13/10/6.
 //  Copyright (c) 2013年 王 瀚宇. All rights reserved.
 //
 
-#import "EnemyPath.h"
-#import "Constants.h"
+#import "SinPath.h"
 
-//#include <math.h>
-
-@implementation EnemyPath
+@implementation SinPath
 
 -(id)init
 {
@@ -19,6 +16,7 @@
     {
         isLimitedLife = true;
         maxLifeTime = 6;
+        
         return self;
     }
     else
@@ -30,10 +28,11 @@
 
 -(CGPoint) GetPosition:(float) nowTime
 {
-    float X = SCREEN_WIDTH-nowTime/maxLifeTime*SCREEN_WIDTH;
-    float Y = SCREEN_HEIGHT/2;
+    float X = -10 + ((480+20) * ((maxLifeTime - nowTime)/maxLifeTime));
+    float Y = 160 + 140 * cos(nowTime*2);
     
     return ccp(X,Y);
 }
-    
+
+
 @end

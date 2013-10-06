@@ -10,10 +10,9 @@
 #import "cocos2d.h"
 #import "EnemyPath.h"
 
-@interface EnemyPath2 : EnemyPath {
-    
+@interface CirclePath : EnemyPath {
+
 @public
-    
     CGPoint P0, P1, P2;
     float t;
 }

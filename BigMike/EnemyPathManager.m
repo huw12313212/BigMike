@@ -8,9 +8,10 @@
 
 #import "EnemyPathManager.h"
 #import "EnemyPath.h"
-#import "EnemyPath1.h"
-#import "EnemyPath2.h"
-//#import "EnemyPath3.h"
+#import "SinPath.h"
+#import "BezierCurve2Path.h"
+#import "CirclePath.h"
+
 
 @implementation EnemyPathManager
 
@@ -23,9 +24,10 @@
     self.candidatePaths = [[NSMutableArray alloc]init];
     
     
-    [self.candidatePaths addObject:[[EnemyPath alloc]init]];
-    [self.candidatePaths addObject:[[EnemyPath1 alloc]init]];
-     //[self.candidatePaths addObject:[[EnemyPath2 alloc]init]];
+//    [self.candidatePaths addObject:[[EnemyPath alloc]init]];
+//    [self.candidatePaths addObject:[[SinPath alloc]init]];
+//        [self.candidatePaths addObject:[[BezierCurve2Path alloc]init]];
+        [self.candidatePaths addObject:[[CirclePath alloc]init]];
         
         
         return self;
