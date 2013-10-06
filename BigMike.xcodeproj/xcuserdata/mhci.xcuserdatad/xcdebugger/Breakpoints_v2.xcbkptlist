@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "BigMike/EnemyPathManager.m"
-            timestampString = "402734473.097463"
+            timestampString = "402738664.813148"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
             landmarkName = "@implementation EnemyPathManager"
             landmarkType = "3">
          </BreakpointContent>
