@@ -56,7 +56,7 @@ enum {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
         self.player = [[Player alloc]init:self];
-        self.articleAnalysis = [[ArticleAnalysis alloc]init];
+        //self.articleAnalysis = [[ArticleAnalysis alloc]init];
         self.enemyManager = [[EnemyManager alloc]init:self];
         [self.enemyManager setNowArticleAnaysis:self.articleAnalysis];
         
@@ -72,7 +72,7 @@ enum {
 
 -(void) dealloc
 {
-	[super dealloc];
+
 }	
 
 

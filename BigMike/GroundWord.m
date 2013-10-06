@@ -78,6 +78,7 @@
 
 -(void)update:(ccTime)dt {
     if (self.ground.position.x < -40) {
+        [self removeAllChildrenWithCleanup:YES];
         [self removeFromParentAndCleanup:YES];
     }
 }
