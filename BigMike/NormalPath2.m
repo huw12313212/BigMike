@@ -1,17 +1,16 @@
 //
-//  NormalPath1.m
+//  NormalPath2.m
 //  BigMike
 //
 //  Created by Thomas on 13/10/6.
 //  Copyright (c) 2013年 王 瀚宇. All rights reserved.
 //
 
-#import "NormalPath1.h"
+#import "NormalPath2.h"
 #import "Constants.h"
-#import "cocos2d.h"
 
-@implementation NormalPath1
 
+@implementation NormalPath2
 
 -(id)init : (Boolean)invert
 {
@@ -20,16 +19,16 @@
         isLimitedLife = true;
         maxLifeTime = 6;
         _invert = invert;
-
+        
         self.accessPoint = [NSArray arrayWithObjects:
                             [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH, 50)],
                             [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH-200, 500)],
-                            [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH-200, 250)],
+                            [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH-100, 250)],
+                            [NSValue valueWithCGPoint:CGPointMake(SCREEN_WIDTH-350, 100)],
                             [NSValue valueWithCGPoint:CGPointMake(-10, 250)] ,nil];
         
-        self.accessTime = [NSArray arrayWithObjects:@(0),@(2),@(4),@(6),nil];
+        self.accessTime = [NSArray arrayWithObjects:@(0),@(4),@(6),nil];
         
-
         
         return self;
     }
@@ -43,7 +42,6 @@
 
 -(CGPoint) GetPosition:(float) nowTime
 {
-
     
     
     int index = 0;
@@ -58,53 +56,36 @@
         index ++;
     }
     
-
     
-    if(index >= [self.accessPoint count])
+    
+    if(index >= [self.accessTime count])
     {
         return ccp(-20,0);
     }
     else
     {
-        CGPoint nextPoint = [self.accessPoint[index] CGPointValue];
-        CGPoint previousPoint = [self.accessPoint[index-1] CGPointValue];
         
+        P0 = [self.accessPoint[(index-1)*2] CGPointValue];
+        P2 = [self.accessPoint[(index-1)*2+2] CGPointValue];
+        P1 = [self.accessPoint[(index-1)*2+1] CGPointValue];
+
         float nextTime = [self.accessTime[index] floatValue];
         float previousTime = [self.accessTime[index-1] floatValue];
-        
-        float ratio = (nowTime - previousTime)/(nextTime-previousTime);
-        
-        float positionX =nextPoint.x * ratio + previousPoint.x *(1-ratio);
-        
-        float positionY =nextPoint.y * ratio + previousPoint.y *(1-ratio);
+        t = (nowTime - previousTime)/(nextTime-previousTime);
+
+        float X = (1-t)*(1-t)*P0.x + 2*t*(1-t)*P1.x + t*t*P2.x;
+        float Y = (1-t)*(1-t)*P0.y + 2*t*(1-t)*P1.y + t*t*P2.y;
         
         if (_invert == false){
-            positionY = SCREEN_HEIGHT - positionY;
+            Y = SCREEN_HEIGHT - Y;
         }
-        
-        return ccp(positionX,positionY);
+
+        return ccp(X, Y);
     }
     
     
-//    float ratio, tempTime = nowTime;
-//    
-//    if (X<=SCREEN_WIDTH/3*2 && X>=SCREEN_WIDTH/2){
-//        ratio = nowTime/2;
-//        Y = SCREEN_HEIGHT/2 + 50*nowTime/maxLifeTime;
-//    }
-//    else if (X<SCREEN_WIDTH/2 && X>=SCREEN_WIDTH/3){
-//
-//    }
-//    else if (X<SCREEN_WIDTH/3){
-//        Y = SCREEN_HEIGHT/2 - 100*nowTime/maxLifeTime;
-//    }
-//    else {
-//    
-//    }
     
     
-    //return ccp(X,Y);
+    
 }
-
-
 @end

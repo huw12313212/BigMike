@@ -1,5 +1,5 @@
 //
-//  NormalPath1.h
+//  NormalPath3.h
 //  BigMike
 //
 //  Created by Thomas on 13/10/6.
@@ -8,8 +8,10 @@
 
 #import "EnemyPath.h"
 
-@interface NormalPath1 : EnemyPath
-{
+@interface NormalPath3 : EnemyPath{
+@public
+    CGPoint P0, P1, P2;
+    float t;
     Boolean _invert;
 }
 
@@ -18,5 +20,6 @@
 @property (nonatomic, retain)NSArray* accessTime;
 
 -(id)init: (Boolean)invert;
+
 
 @end

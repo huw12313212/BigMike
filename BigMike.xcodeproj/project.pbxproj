@@ -201,6 +201,9 @@
 		E0BD233A18014EEC004160C4 /* EnemyPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233918014EEC004160C4 /* EnemyPath1.m */; };
 		E0BD233D180152A4004160C4 /* Sin2Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233C180152A4004160C4 /* Sin2Path.m */; };
 		E0BD234018015748004160C4 /* NormalPath1.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233F18015748004160C4 /* NormalPath1.m */; };
+		E0BD2343180178DD004160C4 /* NormalPath2.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD2342180178DD004160C4 /* NormalPath2.m */; };
+		E0BD234618017A48004160C4 /* BezierCurve3Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD234518017A48004160C4 /* BezierCurve3Path.m */; };
+		E0BD234918018937004160C4 /* NormalPath3.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD234818018937004160C4 /* NormalPath3.m */; };
 		E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CE817FFEDA00038A390 /* CirclePath.m */; };
 		E0DA5CEC180045AF0038A390 /* BezierCurve2Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */; };
 /* End PBXBuildFile section */
@@ -611,6 +614,12 @@
 		E0BD233C180152A4004160C4 /* Sin2Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Sin2Path.m; sourceTree = "<group>"; };
 		E0BD233E18015748004160C4 /* NormalPath1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalPath1.h; sourceTree = "<group>"; };
 		E0BD233F18015748004160C4 /* NormalPath1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPath1.m; sourceTree = "<group>"; };
+		E0BD2341180178DD004160C4 /* NormalPath2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalPath2.h; sourceTree = "<group>"; };
+		E0BD2342180178DD004160C4 /* NormalPath2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPath2.m; sourceTree = "<group>"; };
+		E0BD234418017A48004160C4 /* BezierCurve3Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve3Path.h; sourceTree = "<group>"; };
+		E0BD234518017A48004160C4 /* BezierCurve3Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve3Path.m; sourceTree = "<group>"; };
+		E0BD234718018937004160C4 /* NormalPath3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NormalPath3.h; sourceTree = "<group>"; };
+		E0BD234818018937004160C4 /* NormalPath3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NormalPath3.m; sourceTree = "<group>"; };
 		E0DA5CE717FFEDA00038A390 /* CirclePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclePath.h; sourceTree = "<group>"; };
 		E0DA5CE817FFEDA00038A390 /* CirclePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclePath.m; sourceTree = "<group>"; };
 		E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve2Path.h; sourceTree = "<group>"; };
@@ -1254,10 +1263,16 @@
 				E0BD233C180152A4004160C4 /* Sin2Path.m */,
 				E0BD233E18015748004160C4 /* NormalPath1.h */,
 				E0BD233F18015748004160C4 /* NormalPath1.m */,
+				E0BD2341180178DD004160C4 /* NormalPath2.h */,
+				E0BD2342180178DD004160C4 /* NormalPath2.m */,
+				E0BD234718018937004160C4 /* NormalPath3.h */,
+				E0BD234818018937004160C4 /* NormalPath3.m */,
 				E0DA5CE717FFEDA00038A390 /* CirclePath.h */,
 				E0DA5CE817FFEDA00038A390 /* CirclePath.m */,
 				E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */,
 				E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */,
+				E0BD234418017A48004160C4 /* BezierCurve3Path.h */,
+				E0BD234518017A48004160C4 /* BezierCurve3Path.m */,
 				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
 				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
 				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
@@ -1388,6 +1403,7 @@
 				8A4CE6A717FD8F1A00241E1F /* CCTileMapAtlas.m in Sources */,
 				8A7F044317FEF04100A84B23 /* ArticleAnalysis.m in Sources */,
 				8A4CE6AA17FD8F1A00241E1F /* CCTMXLayer.m in Sources */,
+				E0BD234618017A48004160C4 /* BezierCurve3Path.m in Sources */,
 				8A4CE75F17FD8F1B00241E1F /* b2CollideEdge.cpp in Sources */,
 				8A4CE77317FD8F1B00241E1F /* b2CircleShape.cpp in Sources */,
 				8A4CE74217FD8F1B00241E1F /* mat4.c in Sources */,
@@ -1412,6 +1428,7 @@
 				8A4CE6EC17FD8F1A00241E1F /* ccCArray.m in Sources */,
 				E0DA5CEC180045AF0038A390 /* BezierCurve2Path.m in Sources */,
 				8A4CE71617FD8F1A00241E1F /* CDXMacOSXSupport.m in Sources */,
+				E0BD234918018937004160C4 /* NormalPath3.m in Sources */,
 				8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */,
 				8A4CE70A17FD8F1A00241E1F /* ZipUtils.m in Sources */,
 				8A4CE5FC17FD8F1900241E1F /* CCActionManager.m in Sources */,
@@ -1510,6 +1527,7 @@
 				8A4CE7D117FD8F1B00241E1F /* b2PrismaticJoint.cpp in Sources */,
 				8A4CE75A17FD8F1B00241E1F /* b2BroadPhase.cpp in Sources */,
 				8A4CE69B17FD8F1A00241E1F /* CCTexture2D.m in Sources */,
+				E0BD2343180178DD004160C4 /* NormalPath2.m in Sources */,
 				8A4CE6B017FD8F1A00241E1F /* CCTMXTiledMap.m in Sources */,
 				8A4CE67117FD8F1A00241E1F /* CCRenderTexture.m in Sources */,
 				8A4CE5F917FD8F1900241E1F /* CCActionInterval.m in Sources */,

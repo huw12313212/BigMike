@@ -1,5 +1,5 @@
 //
-//  SinPath.h
+//  BezierCurve3Path.h
 //  BigMike
 //
 //  Created by Thomas on 13/10/6.
@@ -7,12 +7,7 @@
 //
 
 #import "EnemyPath.h"
-#import <Foundation/Foundation.h>
-#import "cocos2d.h"
 
-@interface SinPath : EnemyPath{
-@public
-}
-
+@interface BezierCurve3Path : EnemyPath
 
 @end
