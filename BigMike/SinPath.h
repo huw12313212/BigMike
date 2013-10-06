@@ -1,19 +1,17 @@
 //
-//  EnemyPath.h
+//  SinPath.h
 //  BigMike
 //
-//  Created by 王 瀚宇 on 13/10/4.
+//  Created by Thomas on 13/10/6.
 //  Copyright (c) 2013年 王 瀚宇. All rights reserved.
 //
 
+#import "EnemyPath.h"
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
 
-@interface EnemyPath : NSObject
-{
-    @public
-    Boolean isLimitedLife;
-    float maxLifeTime;
+@interface SinPath : EnemyPath{
+@public
 }
 
 -(id)init;

@@ -59,6 +59,7 @@
             positionY = 110 + offsetY;
         }
         
+      //  [CCDirector sharedDirector].setViewport
         CGSize screenSize = [CCDirector sharedDirector].winSize;
         self.ground = [CCLabelTTF labelWithString:ground_word
                                     fontName:DEFAULT_FONT fontSize:font_size];

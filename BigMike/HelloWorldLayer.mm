@@ -104,12 +104,13 @@ enum {
     [self.bulletManager update:dt withPoint:[self.player position]];
     [self.player update:dt];
     [self.enemyManager update:dt];
+    [self.bulletManager checkBulletHitEnemy:self.enemyManager];
     
 }
 
 -(void)creatGround:(int)line{
-    GroundWord *ground = [[GroundWord alloc] init:line];
-    [self addChild:ground z:-100];
+    //GroundWord *ground = [[GroundWord alloc] init:line];
+    //[self addChild:ground z:-100];
 }
 
 

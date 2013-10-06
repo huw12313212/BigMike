@@ -196,6 +196,10 @@
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
+		E0BD233418013A12004160C4 /* EnemyPathManager.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD233318013A12004160C4 /* EnemyPathManager.m */; };
+		E0BD2337180148C8004160C4 /* SinPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E0BD2336180148C8004160C4 /* SinPath.m */; };
+		E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CE817FFEDA00038A390 /* CirclePath.m */; };
+		E0DA5CEC180045AF0038A390 /* BezierCurve2Path.m in Sources */ = {isa = PBXBuildFile; fileRef = E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -594,6 +598,14 @@
 		8A91DDBD17FEB8B60030DD34 /* BulletManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BulletManager.m; sourceTree = "<group>"; };
 		8A91DDBF17FED7A60030DD34 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		8A91DDC017FED7A60030DD34 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		E0BD233218013A12004160C4 /* EnemyPathManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyPathManager.h; sourceTree = "<group>"; };
+		E0BD233318013A12004160C4 /* EnemyPathManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPathManager.m; sourceTree = "<group>"; };
+		E0BD2335180148C8004160C4 /* SinPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinPath.h; sourceTree = "<group>"; };
+		E0BD2336180148C8004160C4 /* SinPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinPath.m; sourceTree = "<group>"; };
+		E0DA5CE717FFEDA00038A390 /* CirclePath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CirclePath.h; sourceTree = "<group>"; };
+		E0DA5CE817FFEDA00038A390 /* CirclePath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CirclePath.m; sourceTree = "<group>"; };
+		E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierCurve2Path.h; sourceTree = "<group>"; };
+		E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BezierCurve2Path.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1225,8 +1237,16 @@
 				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
 				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
 				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
+				E0BD2335180148C8004160C4 /* SinPath.h */,
+				E0BD2336180148C8004160C4 /* SinPath.m */,
+				E0DA5CE717FFEDA00038A390 /* CirclePath.h */,
+				E0DA5CE817FFEDA00038A390 /* CirclePath.m */,
+				E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */,
+				E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */,
 				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
 				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
+				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
+				E0BD233318013A12004160C4 /* EnemyPathManager.m */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -1294,6 +1314,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "王 瀚宇";
+				TargetAttributes = {
+					8A4CE5AF17FD8F1900241E1F = {
+						DevelopmentTeam = QKNZ2N2P2F;
+					};
+				};
 			};
 			buildConfigurationList = 8A4CE5AB17FD8F1900241E1F /* Build configuration list for PBXProject "BigMike" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -1355,6 +1380,7 @@
 				8A4CE6D917FD8F1A00241E1F /* CCDirectorMac.m in Sources */,
 				8A4CE63317FD8F1900241E1F /* ccGLStateCache.m in Sources */,
 				8A4CE70517FD8F1A00241E1F /* TransformUtils.m in Sources */,
+				E0BD2337180148C8004160C4 /* SinPath.m in Sources */,
 				8A4CE7E017FD8F1B00241E1F /* b2WheelJoint.cpp in Sources */,
 				8A4CE65217FD8F1A00241E1F /* CCNode+Debug.m in Sources */,
 				8A4CE62D17FD8F1900241E1F /* ccFPSImages.m in Sources */,
@@ -1368,6 +1394,7 @@
 				8A4CE63F17FD8F1900241E1F /* CCLabelBMFont.m in Sources */,
 				8A4CE7C817FD8F1B00241E1F /* b2GearJoint.cpp in Sources */,
 				8A4CE6EC17FD8F1A00241E1F /* ccCArray.m in Sources */,
+				E0DA5CEC180045AF0038A390 /* BezierCurve2Path.m in Sources */,
 				8A4CE71617FD8F1A00241E1F /* CDXMacOSXSupport.m in Sources */,
 				8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */,
 				8A4CE70A17FD8F1A00241E1F /* ZipUtils.m in Sources */,
@@ -1382,6 +1409,7 @@
 				8A4CE66117FD8F1A00241E1F /* CCParticleSystem.m in Sources */,
 				8A4CE6B617FD8F1A00241E1F /* CCTransition.m in Sources */,
 				8A4CE76917FD8F1B00241E1F /* b2DynamicTree.cpp in Sources */,
+				E0BD233418013A12004160C4 /* EnemyPathManager.m in Sources */,
 				8A4CE79517FD8F1B00241E1F /* b2ContactManager.cpp in Sources */,
 				8A4CE65E17FD8F1A00241E1F /* CCParticleExamples.m in Sources */,
 				8A4CE65B17FD8F1A00241E1F /* CCParticleBatchNode.m in Sources */,
@@ -1495,6 +1523,7 @@
 				8A4CE69217FD8F1A00241E1F /* CCSpriteBatchNode.m in Sources */,
 				8A4CE61B17FD8F1900241E1F /* CCConfiguration.m in Sources */,
 				8A4CE67717FD8F1A00241E1F /* CCScheduler.m in Sources */,
+				E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */,
 				8A4CE6C717FD8F1A00241E1F /* CCDirectorIOS.m in Sources */,
 				8A4CE64917FD8F1900241E1F /* CCMenu.m in Sources */,
 				8A4CE75217FD8F1B00241E1F /* vec4.c in Sources */,
@@ -1568,12 +1597,15 @@
 				);
 				HEADER_SEARCH_PATHS = "\"BigMike/libs/kazmath/include\"";
 				INFOPLIST_FILE = BigMike/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"BigMike/libs\"";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1594,12 +1626,15 @@
 				);
 				HEADER_SEARCH_PATHS = "\"BigMike/libs/kazmath/include\"";
 				INFOPLIST_FILE = BigMike/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_LDFLAGS = (
 					"-lz",
 					"-lsqlite3",
 					"-ObjC",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				USER_HEADER_SEARCH_PATHS = "\"BigMike/libs\"";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
