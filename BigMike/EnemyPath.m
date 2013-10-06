@@ -13,7 +13,7 @@
 
 @implementation EnemyPath
 
--(id)init
+-(id)init: (Boolean)invert
 {
     if(self = [super init])
     {

@@ -19,10 +19,5 @@
 }
 
 
--(id)init;
-
--(CGPoint) GetPosition:(float) nowTime;
-
-
 @end
 

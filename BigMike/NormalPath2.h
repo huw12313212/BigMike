@@ -1,5 +1,5 @@
 //
-//  NormalPath1.h
+//  NormalPath2.h
 //  BigMike
 //
 //  Created by Thomas on 13/10/6.
@@ -8,8 +8,10 @@
 
 #import "EnemyPath.h"
 
-@interface NormalPath1 : EnemyPath
-{
+@interface NormalPath2 : EnemyPath{
+@public
+    CGPoint P0, P1, P2;
+    float t;
     Boolean _invert;
 }
 

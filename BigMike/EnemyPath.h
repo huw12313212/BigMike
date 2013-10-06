@@ -16,7 +16,7 @@
     float maxLifeTime;
 }
 
--(id)init;
+-(id)init: (Boolean)invert;
 
 -(CGPoint) GetPosition:(float) nowTime;
 
