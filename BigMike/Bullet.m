@@ -94,7 +94,15 @@
                                 call,
                                 nil];
         
-        [self.bulletTextureGray runAction:sequence];
+
+
+            [self.bulletTextureGray setColor:ccc3(255, 255, 255)];
+        
+                [self.bulletTextureGray runAction:sequence];
+                [self.bulletTextureGray runAction:[CCTintTo actionWithDuration:0.25 red:201 green:76 blue:18]];
+        
+        
+        
     }
     
     

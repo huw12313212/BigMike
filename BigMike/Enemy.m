@@ -89,6 +89,8 @@
         }
         ];
         
+        
+        
         CCSequence* sequence = [CCSequence actions:
                                 ease,
                                 ease2,
