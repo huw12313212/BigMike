@@ -16,6 +16,9 @@
 @property (strong,nonatomic)NSString* title;
 @property (strong,nonatomic)NSString* content;
 @property (strong,nonatomic)NSArray* sentenceArray;
+@property (strong,nonatomic)NSMutableDictionary* characterDictionary;
+@property (strong,nonatomic)NSArray* characterArray;
+
 
 
 -(id)init;

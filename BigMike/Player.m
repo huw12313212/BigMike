@@ -42,7 +42,7 @@
     CGPoint newPosition = ccpAdd([self position],Dif);
     [self.playerLabel setPosition:newPosition];
     
-    CCLOG(@"Player position:(%f,%f)",newPosition.x,newPosition.y);
+   // CCLOG(@"Player position:(%f,%f)",newPosition.x,newPosition.y);
 }
 
 -(void)update :(ccTime)dt

@@ -193,6 +193,7 @@
 		8A7F043D17FEEDDF00A84B23 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */; };
 		8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */; };
 		8A7F044317FEF04100A84B23 /* ArticleAnalysis.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */; };
+		8A88EEA41803E438002FA3D2 /* CharacterEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A88EEA31803E438002FA3D2 /* CharacterEntry.m */; };
 		8A91DDB717FE831F0030DD34 /* Bullet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDB617FE831F0030DD34 /* Bullet.m */; };
 		8A91DDBE17FEB8B60030DD34 /* BulletManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDBD17FEB8B60030DD34 /* BulletManager.m */; };
 		8A91DDC117FED7A60030DD34 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A91DDC017FED7A60030DD34 /* Player.m */; };
@@ -597,6 +598,8 @@
 		8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyPath.m; sourceTree = "<group>"; };
 		8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleAnalysis.h; sourceTree = "<group>"; };
 		8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArticleAnalysis.m; sourceTree = "<group>"; };
+		8A88EEA21803E438002FA3D2 /* CharacterEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterEntry.h; sourceTree = "<group>"; };
+		8A88EEA31803E438002FA3D2 /* CharacterEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterEntry.m; sourceTree = "<group>"; };
 		8A91DDB517FE831F0030DD34 /* Bullet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bullet.h; sourceTree = "<group>"; };
 		8A91DDB617FE831F0030DD34 /* Bullet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bullet.m; sourceTree = "<group>"; };
 		8A91DDB817FE8BCF0030DD34 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -693,6 +696,7 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A88EEA11803E3F8002FA3D2 /* ArticleAnalysis */,
 				8A7F043717FEEC9900A84B23 /* Enemy */,
 				8A91DDC417FED7D90030DD34 /* System */,
 				8A91DDC317FED7C70030DD34 /* Player */,
@@ -1273,12 +1277,21 @@
 				E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */,
 				E0BD234418017A48004160C4 /* BezierCurve3Path.h */,
 				E0BD234518017A48004160C4 /* BezierCurve3Path.m */,
-				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
-				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
 				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
 				E0BD233318013A12004160C4 /* EnemyPathManager.m */,
 			);
 			name = Enemy;
+			sourceTree = "<group>";
+		};
+		8A88EEA11803E3F8002FA3D2 /* ArticleAnalysis */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F044117FEF04100A84B23 /* ArticleAnalysis.h */,
+				8A7F044217FEF04100A84B23 /* ArticleAnalysis.m */,
+				8A88EEA21803E438002FA3D2 /* CharacterEntry.h */,
+				8A88EEA31803E438002FA3D2 /* CharacterEntry.m */,
+			);
+			name = ArticleAnalysis;
 			sourceTree = "<group>";
 		};
 		8A91DDC217FED7B30030DD34 /* Bullet */ = {
@@ -1558,6 +1571,7 @@
 				8A4CE6DC17FD8F1A00241E1F /* CCEventDispatcher.m in Sources */,
 				8A4CE69217FD8F1A00241E1F /* CCSpriteBatchNode.m in Sources */,
 				8A4CE61B17FD8F1900241E1F /* CCConfiguration.m in Sources */,
+				8A88EEA41803E438002FA3D2 /* CharacterEntry.m in Sources */,
 				8A4CE67717FD8F1A00241E1F /* CCScheduler.m in Sources */,
 				E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */,
 				8A4CE6C717FD8F1A00241E1F /* CCDirectorIOS.m in Sources */,
