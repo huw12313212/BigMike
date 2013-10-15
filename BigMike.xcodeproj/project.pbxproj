@@ -190,6 +190,11 @@
 		8A4CE7F317FD8F1B00241E1F /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */; };
 		8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */; };
 		8A4CE7F817FD8F1B00241E1F /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F717FD8F1B00241E1F /* blocks.png */; };
+		8A70B634180D35720008DF90 /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B633180D35720008DF90 /* LevelModel.m */; };
+		8A70B637180D37040008DF90 /* EnemyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B636180D37040008DF90 /* EnemyGroup.m */; };
+		8A70B63D180D5FE50008DF90 /* SinglePathEnemyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B63C180D5FE50008DF90 /* SinglePathEnemyGroup.m */; };
+		8A70B644180D72000008DF90 /* DoublePathEnemyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B643180D72000008DF90 /* DoublePathEnemyGroup.m */; };
+		8A70B647180D77590008DF90 /* PathPair.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B646180D77590008DF90 /* PathPair.m */; };
 		8A7F043A17FEEDC800A84B23 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043917FEEDC800A84B23 /* Enemy.m */; };
 		8A7F043D17FEEDDF00A84B23 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */; };
 		8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */; };
@@ -593,6 +598,16 @@
 		8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		8A4CE7F717FD8F1B00241E1F /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		8A70B632180D35720008DF90 /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
+		8A70B633180D35720008DF90 /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
+		8A70B635180D37040008DF90 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
+		8A70B636180D37040008DF90 /* EnemyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyGroup.m; sourceTree = "<group>"; };
+		8A70B63B180D5FE50008DF90 /* SinglePathEnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinglePathEnemyGroup.h; sourceTree = "<group>"; };
+		8A70B63C180D5FE50008DF90 /* SinglePathEnemyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinglePathEnemyGroup.m; sourceTree = "<group>"; };
+		8A70B642180D72000008DF90 /* DoublePathEnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DoublePathEnemyGroup.h; sourceTree = "<group>"; };
+		8A70B643180D72000008DF90 /* DoublePathEnemyGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DoublePathEnemyGroup.m; sourceTree = "<group>"; };
+		8A70B645180D77590008DF90 /* PathPair.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PathPair.h; sourceTree = "<group>"; };
+		8A70B646180D77590008DF90 /* PathPair.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PathPair.m; sourceTree = "<group>"; };
 		8A7F043817FEEDC800A84B23 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		8A7F043917FEEDC800A84B23 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		8A7F043B17FEEDDF00A84B23 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
@@ -699,6 +714,7 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A70B63A180D5D670008DF90 /* Level */,
 				8A88EEA11803E3F8002FA3D2 /* ArticleAnalysis */,
 				8A7F043717FEEC9900A84B23 /* Enemy */,
 				8A91DDC417FED7D90030DD34 /* System */,
@@ -1253,35 +1269,76 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		8A7F043717FEEC9900A84B23 /* Enemy */ = {
+		8A70B638180D5D2E0008DF90 /* Path */ = {
 			isa = PBXGroup;
 			children = (
-				8A7F043817FEEDC800A84B23 /* Enemy.h */,
-				8A7F043917FEEDC800A84B23 /* Enemy.m */,
-				8A7F043B17FEEDDF00A84B23 /* EnemyManager.h */,
-				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
-				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
-				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
-				E0BD233818014EEC004160C4 /* EnemyPath1.h */,
-				E0BD233918014EEC004160C4 /* EnemyPath1.m */,
+				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
+				E0BD233318013A12004160C4 /* EnemyPathManager.m */,
 				E0BD2335180148C8004160C4 /* SinPath.h */,
 				E0BD2336180148C8004160C4 /* SinPath.m */,
 				E0BD233B180152A4004160C4 /* Sin2Path.h */,
 				E0BD233C180152A4004160C4 /* Sin2Path.m */,
+				E0DA5CE717FFEDA00038A390 /* CirclePath.h */,
+				E0DA5CE817FFEDA00038A390 /* CirclePath.m */,
 				E0BD233E18015748004160C4 /* NormalPath1.h */,
 				E0BD233F18015748004160C4 /* NormalPath1.m */,
 				E0BD2341180178DD004160C4 /* NormalPath2.h */,
 				E0BD2342180178DD004160C4 /* NormalPath2.m */,
 				E0BD234718018937004160C4 /* NormalPath3.h */,
 				E0BD234818018937004160C4 /* NormalPath3.m */,
-				E0DA5CE717FFEDA00038A390 /* CirclePath.h */,
-				E0DA5CE817FFEDA00038A390 /* CirclePath.m */,
+				8A7F043E17FEEF3B00A84B23 /* EnemyPath.h */,
+				8A7F043F17FEEF3B00A84B23 /* EnemyPath.m */,
+				E0BD233818014EEC004160C4 /* EnemyPath1.h */,
+				E0BD233918014EEC004160C4 /* EnemyPath1.m */,
+				8A70B645180D77590008DF90 /* PathPair.h */,
+				8A70B646180D77590008DF90 /* PathPair.m */,
+			);
+			name = Path;
+			sourceTree = "<group>";
+		};
+		8A70B639180D5D530008DF90 /* EnemyGroup */ = {
+			isa = PBXGroup;
+			children = (
+				8A70B635180D37040008DF90 /* EnemyGroup.h */,
+				8A70B636180D37040008DF90 /* EnemyGroup.m */,
+				8A70B63B180D5FE50008DF90 /* SinglePathEnemyGroup.h */,
+				8A70B63C180D5FE50008DF90 /* SinglePathEnemyGroup.m */,
+				8A70B642180D72000008DF90 /* DoublePathEnemyGroup.h */,
+				8A70B643180D72000008DF90 /* DoublePathEnemyGroup.m */,
+			);
+			name = EnemyGroup;
+			sourceTree = "<group>";
+		};
+		8A70B63A180D5D670008DF90 /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				8A70B632180D35720008DF90 /* LevelModel.h */,
+				8A70B633180D35720008DF90 /* LevelModel.m */,
+			);
+			name = Level;
+			sourceTree = "<group>";
+		};
+		8A70B63E180D619D0008DF90 /* EnemyType */ = {
+			isa = PBXGroup;
+			children = (
+				8A7F043817FEEDC800A84B23 /* Enemy.h */,
+				8A7F043917FEEDC800A84B23 /* Enemy.m */,
+			);
+			name = EnemyType;
+			sourceTree = "<group>";
+		};
+		8A7F043717FEEC9900A84B23 /* Enemy */ = {
+			isa = PBXGroup;
+			children = (
+				8A70B63E180D619D0008DF90 /* EnemyType */,
+				8A70B639180D5D530008DF90 /* EnemyGroup */,
+				8A70B638180D5D2E0008DF90 /* Path */,
+				8A7F043B17FEEDDF00A84B23 /* EnemyManager.h */,
+				8A7F043C17FEEDDF00A84B23 /* EnemyManager.m */,
 				E0DA5CEA180045AF0038A390 /* BezierCurve2Path.h */,
 				E0DA5CEB180045AF0038A390 /* BezierCurve2Path.m */,
 				E0BD234418017A48004160C4 /* BezierCurve3Path.h */,
 				E0BD234518017A48004160C4 /* BezierCurve3Path.m */,
-				E0BD233218013A12004160C4 /* EnemyPathManager.h */,
-				E0BD233318013A12004160C4 /* EnemyPathManager.m */,
 			);
 			name = Enemy;
 			sourceTree = "<group>";
@@ -1421,6 +1478,7 @@
 				8A4CE6A717FD8F1A00241E1F /* CCTileMapAtlas.m in Sources */,
 				8A7F044317FEF04100A84B23 /* ArticleAnalysis.m in Sources */,
 				8A4CE6AA17FD8F1A00241E1F /* CCTMXLayer.m in Sources */,
+				8A70B644180D72000008DF90 /* DoublePathEnemyGroup.m in Sources */,
 				E0BD234618017A48004160C4 /* BezierCurve3Path.m in Sources */,
 				8A4CE75F17FD8F1B00241E1F /* b2CollideEdge.cpp in Sources */,
 				8A4CE77317FD8F1B00241E1F /* b2CircleShape.cpp in Sources */,
@@ -1515,12 +1573,14 @@
 				8A4CE7ED17FD8F1B00241E1F /* AppDelegate.mm in Sources */,
 				8A4CE6D517FD8F1A00241E1F /* CCTouchHandler.m in Sources */,
 				8A4CE64F17FD8F1A00241E1F /* CCMotionStreak.m in Sources */,
+				8A70B634180D35720008DF90 /* LevelModel.m in Sources */,
 				8A4CE78117FD8F1B00241E1F /* b2Draw.cpp in Sources */,
 				8A4CE6CE17FD8F1A00241E1F /* CCGLView.m in Sources */,
 				8A4CE6FB17FD8F1A00241E1F /* CGPointExtension.m in Sources */,
 				8A4CE5FF17FD8F1900241E1F /* CCActionPageTurn3D.m in Sources */,
 				8A4CE7F017FD8F1B00241E1F /* HelloWorldLayer.mm in Sources */,
 				8A4CE75017FD8F1B00241E1F /* vec3.c in Sources */,
+				8A70B647180D77590008DF90 /* PathPair.m in Sources */,
 				8A4CE70217FD8F1A00241E1F /* TGAlib.m in Sources */,
 				8A4CE60B17FD8F1900241E1F /* CCAnimation.m in Sources */,
 				8A4CE73617FD8F1B00241E1F /* aabb.c in Sources */,
@@ -1547,9 +1607,11 @@
 				8A4CE75A17FD8F1B00241E1F /* b2BroadPhase.cpp in Sources */,
 				8A4CE69B17FD8F1A00241E1F /* CCTexture2D.m in Sources */,
 				E0BD2343180178DD004160C4 /* NormalPath2.m in Sources */,
+				8A70B63D180D5FE50008DF90 /* SinglePathEnemyGroup.m in Sources */,
 				8A4CE6B017FD8F1A00241E1F /* CCTMXTiledMap.m in Sources */,
 				8A4CE67117FD8F1A00241E1F /* CCRenderTexture.m in Sources */,
 				8A4CE5F917FD8F1900241E1F /* CCActionInterval.m in Sources */,
+				8A70B637180D37040008DF90 /* EnemyGroup.m in Sources */,
 				8A4CE66717FD8F1A00241E1F /* CCPhysicsDebugNode.m in Sources */,
 				8A4CE5ED17FD8F1900241E1F /* CCActionEase.m in Sources */,
 				8A4CE62A17FD8F1900241E1F /* CCFontDefinition.m in Sources */,

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "EnemyPath.h"
+#import "PathPair.h"
 
 @interface EnemyPathManager : NSObject
 
@@ -15,6 +16,12 @@
 -(id)init;
 -(EnemyPath*) RandomProducePath;
 
+-(PathPair*) RandomProducePairPath;
+
+
+
 @property NSMutableArray* candidatePaths;
+@property NSMutableArray* candidateInversePairPaths;
+@property NSMutableArray* middlePaths;
 
 @end

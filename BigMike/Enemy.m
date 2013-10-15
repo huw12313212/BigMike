@@ -45,7 +45,7 @@
         isAlive = true;
         time = 0;
         hp = ENEMY_HP;
-        
+        maxHP =ENEMY_HP;
         
         self.parentNode = parent;
         self.enemyLabel = [CCLabelTTF labelWithString: str fontName:DEFAULT_FONT fontSize:ENEMY_SIZE];
@@ -63,7 +63,7 @@
 {
     hp--;
     
-    float ratio = (float)hp/ENEMY_HP;
+    float ratio = (float)hp/maxHP;
     
     ccColor3B color;
     color.r = ENEMY_START_COLOR.r * ratio + ENEMY_DEAD_COLOR.r *(1-ratio);

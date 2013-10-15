@@ -17,28 +17,14 @@
 
 -(void)update:(ccTime)dt
 {
-    if(![self.nowArticleAnaysis isEnd])
+    
+    if([self isAllDead])
     {
-        if([self isAllDead])
+            //  NSLog(@"test1");
+        if(![self.levelModel isEnd])
         {
-            
-            
-            EnemyPath* path = [self.enemyPathManager RandomProducePath];
-            
-            NSString* nextLine = [self.nowArticleAnaysis GetNextLine];
-            
-            int len = [nextLine length];
-            for (int i = 0; i < len; i++) {
-               
-                
-                NSString* character = [nextLine substringWithRange:NSMakeRange(i, 1)];
-                Enemy* enemy = [[Enemy alloc]init :self.parentNode : character];
-                [self.parentNode addChild:enemy.enemyLabel];
-                enemy->time= -i*ENEMY_PADDING;
-                enemy.path = path;
-                
-                [self.nowAliveEnemies addObject:enemy];
-            }
+            //NSLog(@"test2");
+            [self.levelModel createNextEnemyGroup:self.parentNode :self.nowAliveEnemies :self.enemyPathManager];
         }
     }
     
@@ -68,7 +54,7 @@
      self.parentNode = parent;
      self.nowAliveEnemies = [[NSMutableArray alloc]init];
      self.trashEnemies =[[NSMutableArray alloc]init];
-        self.enemyPathManager = [[EnemyPathManager alloc]init];
+     self.enemyPathManager = [[EnemyPathManager alloc]init];
         
      return self;
     }
@@ -81,6 +67,9 @@
 -(void)setCurrentArticle:(ArticleAnalysis*) analysis
 {
     self.nowArticleAnaysis = analysis;
+    
+    self.levelModel = [[LevelModel alloc]init:analysis];
+    
 }
 
 -(bool)isAllDead

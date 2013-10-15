@@ -10,6 +10,7 @@
 #import "cocos2d.h"
 #import "ArticleAnalysis.h"
 #import "EnemyPathManager.h"
+#import "LevelModel.h"
 
 @interface EnemyManager : NSObject
 {
@@ -22,6 +23,9 @@
 @property (nonatomic,assign)ArticleAnalysis* nowArticleAnaysis;
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic,strong)EnemyPathManager* enemyPathManager;
+@property (nonatomic,strong)LevelModel* levelModel;
+
+
 
 -(id)init : (CCNode*) parent;
 

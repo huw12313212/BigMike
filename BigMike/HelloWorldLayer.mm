@@ -68,7 +68,7 @@ enum {
         self.player = [[Player alloc]init:self];
         self.articleAnalysis = [[ArticleAnalysis alloc]init];
         self.enemyManager = [[EnemyManager alloc]init:self];
-        [self.enemyManager setNowArticleAnaysis:self.articleAnalysis];
+        [self.enemyManager setCurrentArticle:self.articleAnalysis];
         
         
 		self.touchEnabled = YES;
