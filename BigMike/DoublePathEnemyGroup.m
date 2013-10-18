@@ -16,7 +16,7 @@
         self.line1 = target;
         self.line2 = target2;
         
-        NSLog(@"hello1");
+       // NSLog(@"hello1");
         return self;
     }
     else
@@ -63,6 +63,9 @@
         
         enemy->hp = 2;
         enemy->maxHP = 2;
+        
+        enemy->initColor = ENEMY_START_COLOR2;
+        [enemy RecalculateColor];
         
         [allAliveEnemy addObject:enemy];
     }

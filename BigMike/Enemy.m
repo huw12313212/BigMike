@@ -12,6 +12,7 @@
 
 @implementation Enemy
 
+
 -(void)update:(ccTime)dt
 {
     time += dt;
@@ -47,9 +48,15 @@
         hp = ENEMY_HP;
         maxHP =ENEMY_HP;
         
+        initColor = ENEMY_START_COLOR;
+        deadColor = ENEMY_DEAD_COLOR;
+        
         self.parentNode = parent;
         self.enemyLabel = [CCLabelTTF labelWithString: str fontName:DEFAULT_FONT fontSize:ENEMY_SIZE];
-        [self.enemyLabel setColor:ENEMY_START_COLOR];
+        
+        
+        [self RecalculateColor];
+
  
         return self;
     }
@@ -59,18 +66,24 @@
     }
 }
 
+-(void)RecalculateColor
+{
+    float ratio = (float)hp/maxHP;
+    
+    ccColor3B color;
+    color.r = initColor.r * ratio + deadColor.r *(1-ratio);
+    color.g = initColor.g * ratio + deadColor.g *(1-ratio);
+    color.b = initColor.b * ratio + deadColor.b *(1-ratio);
+    
+    [self.enemyLabel setColor:color];
+}
+
 -(void)BulletHit
 {
     hp--;
     
-    float ratio = (float)hp/maxHP;
-    
-    ccColor3B color;
-    color.r = ENEMY_START_COLOR.r * ratio + ENEMY_DEAD_COLOR.r *(1-ratio);
-    color.g = ENEMY_START_COLOR.g * ratio + ENEMY_DEAD_COLOR.g *(1-ratio);
-    color.b = ENEMY_START_COLOR.b * ratio + ENEMY_DEAD_COLOR.b *(1-ratio);
-    
-    [self.enemyLabel setColor:color];
+
+    [self RecalculateColor];
     
     
     

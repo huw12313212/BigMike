@@ -50,13 +50,15 @@
         {
             [self.AllEnemyGroup addObject: [[SinglePathEnemyGroup alloc]init:nextLine]];
         }
+        
+        
     }
 }
 
 
 -(void)createNextEnemyGroup:(CCNode*) node :(NSMutableArray*) allAliveEnemyArray :(EnemyPathManager*) pathManager
 {
-    NSLog(@"test1111");
+   // NSLog(@"test1111");
     [self.AllEnemyGroup[index] initEnemy:node :allAliveEnemyArray :pathManager];
     
     index ++;

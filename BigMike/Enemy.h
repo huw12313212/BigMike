@@ -16,15 +16,20 @@
     Boolean isAlive;
     NSInteger hp;
     NSInteger maxHP;
+    ccColor3B initColor;
+    ccColor3B deadColor;
+    
     
 }
 
 -(id)init : (CCNode*) parent :(NSString*) str;
 -(void)update:(ccTime)dt;
-@property (nonatomic,strong) EnemyPath* path;
 -(void)BulletHit;
+-(void)RecalculateColor;
+@property (nonatomic,strong) EnemyPath* path;
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic, strong)CCLabelTTF* enemyLabel;
+
 
 
 @end
