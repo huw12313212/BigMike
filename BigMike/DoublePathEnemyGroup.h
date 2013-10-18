@@ -11,7 +11,7 @@
 @interface DoublePathEnemyGroup : EnemyGroup
 
 -(id)init:(NSString*)target :(NSString*) target2;
--(void)initEnemy : (CCNode*)targetNode :(NSMutableArray*) allAliveEnemy :(EnemyPathManager*) pathManager;
+
 
 
 @property (nonatomic,assign)NSString* line1;

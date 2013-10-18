@@ -15,7 +15,6 @@
 
 
 -(id)init:(NSString*)target;
--(void)initEnemy : (CCNode*)targetNode :(NSMutableArray*) allAliveEnemy :(EnemyPathManager*) pathManager;
 
 @property (nonatomic,assign)NSString* line;
 

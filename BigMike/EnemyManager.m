@@ -20,10 +20,10 @@
     
     if([self isAllDead])
     {
-            //  NSLog(@"test1");
+        
         if(![self.levelModel isEnd])
         {
-            //NSLog(@"test2");
+            
             [self.levelModel createNextEnemyGroup:self.parentNode :self.nowAliveEnemies :self.enemyPathManager];
         }
     }

@@ -42,8 +42,8 @@
         enemy->time= -i*ENEMY_PADDING;
         enemy.path =pair.path1;
         
-        enemy->hp = 2;
-        enemy->maxHP = 2;
+        enemy->hp = ENEMY_HP2;
+        enemy->maxHP = ENEMY_HP2;
         
         [allAliveEnemy addObject:enemy];
     }
@@ -61,10 +61,11 @@
         enemy.path =pair.path2;
         
         
-        enemy->hp = 2;
-        enemy->maxHP = 2;
+        enemy->hp = ENEMY_HP2;
+        enemy->maxHP = ENEMY_HP2;
         
         enemy->initColor = ENEMY_START_COLOR2;
+        enemy->deadColor = ENEMY_DEAD_COLOR2;
         [enemy RecalculateColor];
         
         [allAliveEnemy addObject:enemy];

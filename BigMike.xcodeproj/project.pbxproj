@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0E1DFDF417FEFB9300313F72 /* GroundWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0E1DFDF317FEFB9300313F72 /* GroundWord.m */; };
 		0E1E005C18052DE4007DD0D2 /* MenuLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E005B18052DE4007DD0D2 /* MenuLayer.mm */; };
+		8A36B78F1811464200E59299 /* EnemyBossMa.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B78E1811464200E59299 /* EnemyBossMa.m */; };
+		8A36B79218114CCA00E59299 /* EnemyBossMaGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B79118114CCA00E59299 /* EnemyBossMaGroup.m */; };
 		8A4CE5B417FD8F1900241E1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */; };
 		8A4CE5B617FD8F1900241E1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */; };
 		8A4CE5B817FD8F1900241E1F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B717FD8F1900241E1F /* OpenAL.framework */; };
@@ -220,6 +222,10 @@
 		0E1DFDF317FEFB9300313F72 /* GroundWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroundWord.m; sourceTree = "<group>"; };
 		0E1E005A18052DE4007DD0D2 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
 		0E1E005B18052DE4007DD0D2 /* MenuLayer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MenuLayer.mm; sourceTree = "<group>"; };
+		8A36B78D1811464200E59299 /* EnemyBossMa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBossMa.h; sourceTree = "<group>"; };
+		8A36B78E1811464200E59299 /* EnemyBossMa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBossMa.m; sourceTree = "<group>"; };
+		8A36B79018114CCA00E59299 /* EnemyBossMaGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBossMaGroup.h; sourceTree = "<group>"; };
+		8A36B79118114CCA00E59299 /* EnemyBossMaGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBossMaGroup.m; sourceTree = "<group>"; };
 		8A4CE5B017FD8F1900241E1F /* BigMike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigMike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -1305,6 +1311,8 @@
 				8A70B63C180D5FE50008DF90 /* SinglePathEnemyGroup.m */,
 				8A70B642180D72000008DF90 /* DoublePathEnemyGroup.h */,
 				8A70B643180D72000008DF90 /* DoublePathEnemyGroup.m */,
+				8A36B79018114CCA00E59299 /* EnemyBossMaGroup.h */,
+				8A36B79118114CCA00E59299 /* EnemyBossMaGroup.m */,
 			);
 			name = EnemyGroup;
 			sourceTree = "<group>";
@@ -1323,6 +1331,8 @@
 			children = (
 				8A7F043817FEEDC800A84B23 /* Enemy.h */,
 				8A7F043917FEEDC800A84B23 /* Enemy.m */,
+				8A36B78D1811464200E59299 /* EnemyBossMa.h */,
+				8A36B78E1811464200E59299 /* EnemyBossMa.m */,
 			);
 			name = EnemyType;
 			sourceTree = "<group>";
@@ -1507,6 +1517,7 @@
 				E0BD234918018937004160C4 /* NormalPath3.m in Sources */,
 				8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */,
 				8A4CE70A17FD8F1A00241E1F /* ZipUtils.m in Sources */,
+				8A36B79218114CCA00E59299 /* EnemyBossMaGroup.m in Sources */,
 				8A4CE5FC17FD8F1900241E1F /* CCActionManager.m in Sources */,
 				8A4CE66417FD8F1A00241E1F /* CCParticleSystemQuad.m in Sources */,
 				8A4CE62717FD8F1900241E1F /* CCDrawNode.m in Sources */,
@@ -1585,6 +1596,7 @@
 				8A4CE60B17FD8F1900241E1F /* CCAnimation.m in Sources */,
 				8A4CE73617FD8F1B00241E1F /* aabb.c in Sources */,
 				8A4CE6AD17FD8F1A00241E1F /* CCTMXObjectGroup.m in Sources */,
+				8A36B78F1811464200E59299 /* EnemyBossMa.m in Sources */,
 				E0BD233D180152A4004160C4 /* Sin2Path.m in Sources */,
 				8A7F044017FEEF3B00A84B23 /* EnemyPath.m in Sources */,
 				8A91DDC117FED7A60030DD34 /* Player.m in Sources */,

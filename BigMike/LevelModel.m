@@ -9,6 +9,7 @@
 #import "LevelModel.h"
 #import "SinglePathEnemyGroup.h"
 #import "DoublePathEnemyGroup.h"
+#import "EnemyBossMaGroup.h"
 
 
 @implementation LevelModel
@@ -51,8 +52,9 @@
             [self.AllEnemyGroup addObject: [[SinglePathEnemyGroup alloc]init:nextLine]];
         }
         
-        
     }
+    
+    [self.AllEnemyGroup insertObject: [[EnemyBossMaGroup alloc]init] atIndex:2];
 }
 
 

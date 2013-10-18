@@ -7,8 +7,8 @@
 //
 
 #import "Enemy.h"
-#import "cocos2d.h"
-#import "Constants.h"
+
+
 
 @implementation Enemy
 

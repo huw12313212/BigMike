@@ -8,6 +8,8 @@
 
 #import "EnemyPath.h"
 #import <Foundation/Foundation.h>
+#import "cocos2d.h"
+#import "Constants.h"
 
 @interface Enemy : NSObject
 {

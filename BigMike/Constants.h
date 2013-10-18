@@ -48,7 +48,6 @@
 #define ENEMY_PADDING 0.4f
 #define ENEMY_SIZE 32
 #define ENEMY_START_COLOR ccc3(255,0,255)
-#define ENEMY_START_COLOR2 ccc3(0,150,150)
 #define ENEMY_DEAD_COLOR ccc3(255,0,0)
 #define ENEMY_HP 4
 #define ENEMY_HIT_SCALE 1.3
@@ -56,9 +55,12 @@
 #define ENEMY_POST_DURATION 0.05
 
 
+#define ENEMY_START_COLOR2 ccc3(0,150,150)
+#define ENEMY_DEAD_COLOR2 ccc3(255,0,0)
+#define ENEMY_HP2 4
 
-
-
+#define BOSS_MA_SIZE 97
+#define BOSS_MA_COLOR ccc3(254,247,188)
 
 
 #endif
