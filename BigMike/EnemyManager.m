@@ -12,12 +12,34 @@
 #import "Constants.h"
 #import "EnemyPathManager.h"
 
-
 @implementation EnemyManager
 
 -(void)update:(ccTime)dt
 {
+    [self EnemyLogic : dt];
+    [self CheckEnemyHitPlayer:dt];
+
     
+    
+}
+
+-(void)CheckEnemyHitPlayer:(ccTime)dt
+{
+    CGRect playerRect = self.player.playerLabel.boundingBox;
+    
+    for(Enemy* enemy in self.nowAliveEnemies)
+    {
+        CGRect enemyRect = enemy.enemyLabel.boundingBox;
+        
+        if(CGRectIntersectsRect(playerRect, enemyRect))
+        {
+            [self.player hitByEnemy:enemy];
+        }
+    }
+}
+
+-(void)EnemyLogic:(ccTime)dt
+{
     if([self isAllDead])
     {
         

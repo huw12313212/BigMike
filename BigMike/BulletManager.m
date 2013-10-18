@@ -89,10 +89,10 @@
     }
 }
 
-+(bool)isHited:(CGRect)A:(CGRect)B
++(bool)isHited:(CGRect)RecA:(CGRect)RecB
 {
     
-   return CGRectIntersectsRect(A, B);
+   return CGRectIntersectsRect(RecA, RecB);
 }
 
 -(void)ShootABullet:(CGPoint) position

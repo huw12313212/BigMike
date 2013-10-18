@@ -11,6 +11,7 @@
 		0E1E005C18052DE4007DD0D2 /* MenuLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0E1E005B18052DE4007DD0D2 /* MenuLayer.mm */; };
 		8A36B78F1811464200E59299 /* EnemyBossMa.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B78E1811464200E59299 /* EnemyBossMa.m */; };
 		8A36B79218114CCA00E59299 /* EnemyBossMaGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B79118114CCA00E59299 /* EnemyBossMaGroup.m */; };
+		8A36B7961811538C00E59299 /* HPViewer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A36B7951811538C00E59299 /* HPViewer.m */; };
 		8A4CE5B417FD8F1900241E1F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */; };
 		8A4CE5B617FD8F1900241E1F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */; };
 		8A4CE5B817FD8F1900241E1F /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A4CE5B717FD8F1900241E1F /* OpenAL.framework */; };
@@ -226,6 +227,8 @@
 		8A36B78E1811464200E59299 /* EnemyBossMa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBossMa.m; sourceTree = "<group>"; };
 		8A36B79018114CCA00E59299 /* EnemyBossMaGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyBossMaGroup.h; sourceTree = "<group>"; };
 		8A36B79118114CCA00E59299 /* EnemyBossMaGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyBossMaGroup.m; sourceTree = "<group>"; };
+		8A36B7941811538C00E59299 /* HPViewer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HPViewer.h; sourceTree = "<group>"; };
+		8A36B7951811538C00E59299 /* HPViewer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HPViewer.m; sourceTree = "<group>"; };
 		8A4CE5B017FD8F1900241E1F /* BigMike.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BigMike.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A4CE5B317FD8F1900241E1F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		8A4CE5B517FD8F1900241E1F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
@@ -683,6 +686,15 @@
 			name = Background;
 			sourceTree = "<group>";
 		};
+		8A36B7931811535900E59299 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				8A36B7941811538C00E59299 /* HPViewer.h */,
+				8A36B7951811538C00E59299 /* HPViewer.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
 		8A4CE5A717FD8F1900241E1F = {
 			isa = PBXGroup;
 			children = (
@@ -720,6 +732,7 @@
 		8A4CE5C717FD8F1900241E1F /* BigMike */ = {
 			isa = PBXGroup;
 			children = (
+				8A36B7931811535900E59299 /* GUI */,
 				8A70B63A180D5D670008DF90 /* Level */,
 				8A88EEA11803E3F8002FA3D2 /* ArticleAnalysis */,
 				8A7F043717FEEC9900A84B23 /* Enemy */,
@@ -1547,6 +1560,7 @@
 				8A4CE71917FD8F1A00241E1F /* CDXPropertyModifierAction.m in Sources */,
 				8A4CE6E917FD8F1A00241E1F /* CCArray.m in Sources */,
 				8A4CE74617FD8F1B00241E1F /* plane.c in Sources */,
+				8A36B7961811538C00E59299 /* HPViewer.m in Sources */,
 				8A4CE7B217FD8F1B00241E1F /* b2ContactSolver.cpp in Sources */,
 				8A4CE6F217FD8F1A00241E1F /* CCProfiling.m in Sources */,
 				8A4CE7C517FD8F1B00241E1F /* b2FrictionJoint.cpp in Sources */,

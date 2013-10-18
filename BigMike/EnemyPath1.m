@@ -14,6 +14,7 @@
     if (self = [super init]){
         isLimitedLife = true;
         maxLifeTime = 6;
+        return self;
     }
     else{
         return nil;
@@ -25,7 +26,7 @@
 }
 
 -(CGPoint) GetPosition:(float)nowTime{
-    
+    return ccp(-100, 0);
 }
 
 @end

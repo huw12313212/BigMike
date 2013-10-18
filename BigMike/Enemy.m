@@ -39,7 +39,7 @@
     }
 }
 
--(id)init : (CCNode*) parent:(NSString*) str
+-(id)init : (CCNode*) parent :(NSString*) str
 {
     if(self = [super init])
     {

@@ -17,7 +17,7 @@
 -(id)init :(CCNode*) parent;
 -(void)update:(ccTime) dt withPoint : (CGPoint)position;
 -(void)checkBulletHitEnemy:(EnemyManager*)enemyManager;
-+(bool)isHited:(CGRect)A:(CGRect)B;
++(bool)isHited:(CGRect)RecA:(CGRect)RecB;
 
 @property (nonatomic,strong)NSMutableArray* BulletArray;
 

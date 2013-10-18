@@ -68,6 +68,7 @@ enum {
         self.player = [[Player alloc]init:self];
         self.articleAnalysis = [[ArticleAnalysis alloc]init];
         self.enemyManager = [[EnemyManager alloc]init:self];
+        [self.enemyManager setPlayer:self.player];
         [self.enemyManager setCurrentArticle:self.articleAnalysis];
         
         

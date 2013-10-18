@@ -15,11 +15,16 @@
     
 }
 
+
+
 -(id)init:(CCNode*) parent;
 {
     if(self = [super init])
     {
-    
+    IsImmortal = NO;
+    HP = PLAYER_HP;
+    BlinkCounter = 0;
+        
     self.parentNode = parent;
     self.playerLabel = [CCLabelTTF labelWithString: PLAYER_WORD fontName:DEFAULT_FONT fontSize:PLAYER_SIZE];
     [parent addChild:self.playerLabel ];
@@ -48,6 +53,43 @@
 -(void)update :(ccTime)dt
 {
     [self correctPosition];
+    [self manageHitEffect:dt];
+}
+
+-(void)manageHitEffect:(ccTime)dt
+{
+    if(IsImmortal)
+    {
+        BlinkCounter += dt;
+        
+        if(BlinkCounter >= PLAYER_BLINK_DURATION)
+        {
+            BlinkCounter = 0;
+            IsImmortal = false;
+            [self.playerLabel setColor:PLAYER_COLOR];
+            
+        }
+        else
+        {
+            //NSLog(@"%f",BlinkCounter);
+            float blinkSlot = 1/ (float) PLAYER_BLINK_FREQUENCY;
+            
+            int slotNumber = BlinkCounter / blinkSlot;
+            
+            int colorFlag = slotNumber%2;
+            
+            if(colorFlag == 0)
+            {
+                [self.playerLabel setColor:PLAYER_COLOR];
+            }
+            else
+            {
+                [self.playerLabel setColor:PLAYER_BLINK_COLOR];
+            }
+            
+        }
+        
+    }
 }
 
 -(void)correctPosition
@@ -67,6 +109,35 @@
 -(CGPoint)position
 {
     return [self.playerLabel position];
+}
+
+-(void)hitByEnemy:(NSObject*) enemy
+{
+   
+    
+    if(IsImmortal)
+    {
+        
+        return;
+    }
+    else
+    {
+         NSLog(@"hit by enemy");
+        IsImmortal = true;
+        HP--;
+        if(HP<=0)
+        {
+            NSLog(@"拳四郎：你已經死了。");
+        }
+    }
+}
+
+
+
+-(void)setHPViewer:(HPViewer*) hpViewer
+{
+#warning should finish
+    
 }
     
 @end

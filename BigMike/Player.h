@@ -8,10 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "HPViewer.h"
 
 @interface Player : NSObject
 {
+    @public
     BOOL isAlive;
+    int HP;
+    BOOL IsImmortal;
+    
+    @private
+    float BlinkCounter;
+    
 }
 
 
@@ -21,7 +29,10 @@
 -(id)init:(CCNode*) parent;
 -(void)movePlayerWithDif:(CGPoint)Dif;
 -(void)update :(ccTime)dt;
+-(void)hitByEnemy:(NSObject*) enemy;
+-(void)setHPViewer:(HPViewer*) hpViewer;
 
 -(CGPoint) position;
+
 
 @end

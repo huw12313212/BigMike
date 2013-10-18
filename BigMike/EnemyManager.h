@@ -11,6 +11,7 @@
 #import "ArticleAnalysis.h"
 #import "EnemyPathManager.h"
 #import "LevelModel.h"
+#import "Player.h"
 
 @interface EnemyManager : NSObject
 {
@@ -24,6 +25,7 @@
 @property (nonatomic,assign)CCNode* parentNode;
 @property (nonatomic,strong)EnemyPathManager* enemyPathManager;
 @property (nonatomic,strong)LevelModel* levelModel;
+@property (nonatomic,assign)Player* player;
 
 
 

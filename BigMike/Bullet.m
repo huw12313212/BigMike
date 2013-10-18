@@ -100,20 +100,12 @@
         
                 [self.bulletTextureGray runAction:sequence];
                 [self.bulletTextureGray runAction:[CCTintTo actionWithDuration:0.25 red:201 green:76 blue:18]];
-        
-        
-        
     }
-    
-    
-    
     
 }
 
 -(void)update: (ccTime) dt
 {
-
-    
     if(isShooted)
     {
         CGPoint result =

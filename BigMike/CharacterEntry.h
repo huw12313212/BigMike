@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "Constants.h";
+#import "Constants.h"
 #import "cocos2d.h"
 
 @interface CharacterEntry : NSObject

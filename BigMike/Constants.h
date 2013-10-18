@@ -31,6 +31,10 @@
 #define PLAYER_SIZE 32
 #define PLAYER_COLOR ccc3(129,171,240)
 #define PLAYER_POSITION ccp(40,160)
+#define PLAYER_HP 3
+#define PLAYER_BLINK_FREQUENCY 10
+#define PLAYER_BLINK_COLOR ccc3(29,71,40)
+#define PLAYER_BLINK_DURATION 1
 
 #define GROUND_WORD1 @"街"
 #define GROUND_WORD2 @"村"
@@ -61,6 +65,8 @@
 
 #define BOSS_MA_SIZE 97
 #define BOSS_MA_COLOR ccc3(254,247,188)
+
+
 
 
 #endif
