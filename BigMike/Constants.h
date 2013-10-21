@@ -65,8 +65,10 @@
 
 #define BOSS_MA_SIZE 97
 #define BOSS_MA_COLOR ccc3(254,247,188)
-
-
-
+#define BOSS_MA_BULLET_STRING @"謝謝指教"
+#define BOSS_MA_BULLET_NUMBER 4
+#define BOSS_MA_BULLET_FREQUENCY 8
+#define BOSS_MA_BULLET_SPEED 320
+#define BOSS_MA_BULLET_COLOR  ccc3(255,200,200)
 
 #endif

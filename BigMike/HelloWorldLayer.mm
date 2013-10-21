@@ -66,6 +66,9 @@ enum {
 		
         self.bulletManager = [[BulletManager alloc]init:self];
         self.player = [[Player alloc]init:self];
+        
+        [self setValue:self.player forKey:@"player"];
+        
         self.articleAnalysis = [[ArticleAnalysis alloc]init];
         self.enemyManager = [[EnemyManager alloc]init:self];
         [self.enemyManager setPlayer:self.player];

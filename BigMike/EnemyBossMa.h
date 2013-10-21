@@ -7,7 +7,21 @@
 //
 
 #import "Enemy.h"
+#import "Player.h"
+
+
+
 
 @interface EnemyBossMa : Enemy
+{
+    @public
+    float MinimumDuration;
+    float BulletTimeCounter;
+    int BulletIndex;
+}
+
+@property (strong,nonatomic)NSMutableArray* BulletArray;
+@property (assign,nonatomic)Player* _player;
 
 @end
+

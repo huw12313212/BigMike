@@ -20,6 +20,7 @@
 
 
 -(id)init : (CCNode*)parent;
+-(id)init : (CCNode*)parent : (NSString*)character;
 -(void)shootFromPosition:(CGPoint) point;
 -(void)update: (ccTime) dt;
 -(void)removeBullet:(Boolean)grayEffect;

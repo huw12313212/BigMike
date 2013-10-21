@@ -16,39 +16,39 @@
 @implementation Bullet
 {
     CCNode* bulletparent;
+}
 
-    
+-(id)init :(CCNode*)parent : (NSString*)character;
+{
+    if( self = [super init])
+    {
+        
+        
+        isShooted = false;
+        velicity = ccp(BULLET_SPEED,0);
+        
+        bulletparent = parent;
+        
+        self.bulletTexture = [CCLabelTTF labelWithString:character
+                                                fontName:DEFAULT_FONT
+                                                fontSize:BULLET_SIZE];
+        [self.bulletTexture  setColor:BULLET_COLOR];
+        
+        
+        self.bulletTextureGray = [CCLabelTTF labelWithString:BULLET_GRAY_WORD
+                                                    fontName:DEFAULT_FONT
+                                                    fontSize:BULLET_SIZE];
+        return self;
+    }
+    else
+    {
+        return nil;
+    }
 }
 
 -(id)init :(CCNode*)parent
 {
-   if( self = [super init])
-   {
-    
-    
-    isShooted = false;
-    velicity = ccp(BULLET_SPEED,0);
-    
-    bulletparent = parent;
-    
-    self.bulletTexture = [CCLabelTTF labelWithString:BULLET_WORD
-                                            fontName:DEFAULT_FONT
-                                            fontSize:BULLET_SIZE];
-    [self.bulletTexture  setColor:BULLET_COLOR];
-    
-    
-    self.bulletTextureGray = [CCLabelTTF labelWithString:BULLET_GRAY_WORD
-                                                fontName:DEFAULT_FONT
-                                                fontSize:BULLET_SIZE];
-   
-    
-    
-    return self;
-   }
-    else
-    {
-    return nil;
-    }
+   return [self init : parent : BULLET_WORD];
 }
 
 -(void)shootFromPosition:(CGPoint) point
@@ -112,11 +112,9 @@
         self.bulletTexture.position =
         ccpAdd(self.bulletTexture.position,velicity);
         
-        if(result.x > SCREEN_WIDTH+BULLET_OUTSIDE_PADDING)
+        if(result.x > SCREEN_WIDTH+BULLET_OUTSIDE_PADDING || result.x< -BULLET_OUTSIDE_PADDING)
         {
-         
             [self removeBullet: false];
-            
         }
     }
 }
