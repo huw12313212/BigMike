@@ -86,12 +86,14 @@
         CGPoint Vec2 = CGPointMake(VecX*BOSS_MA_BULLET_SPEED*dt, VecY*BOSS_MA_BULLET_SPEED*dt);
         currentBullet->velicity = Vec2;
         [currentBullet shootFromPosition:position];
+            
+            
+            BulletIndex++;
+            BulletIndex = BulletIndex % BOSS_MA_BULLET_NUMBER;
         
         }
         
         
-        BulletIndex++;
-        BulletIndex = BulletIndex % BOSS_MA_BULLET_NUMBER;
     }
     
     
