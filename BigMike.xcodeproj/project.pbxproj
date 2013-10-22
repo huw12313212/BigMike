@@ -193,6 +193,7 @@
 		8A4CE7F317FD8F1B00241E1F /* IntroLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F217FD8F1B00241E1F /* IntroLayer.mm */; };
 		8A4CE7F617FD8F1B00241E1F /* GLES-Render.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */; };
 		8A4CE7F817FD8F1B00241E1F /* blocks.png in Resources */ = {isa = PBXBuildFile; fileRef = 8A4CE7F717FD8F1B00241E1F /* blocks.png */; };
+		8A6C2D9E1816962E009CDB8B /* DeathHandShake.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A6C2D9D1816962E009CDB8B /* DeathHandShake.m */; };
 		8A70B634180D35720008DF90 /* LevelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B633180D35720008DF90 /* LevelModel.m */; };
 		8A70B637180D37040008DF90 /* EnemyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B636180D37040008DF90 /* EnemyGroup.m */; };
 		8A70B63D180D5FE50008DF90 /* SinglePathEnemyGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A70B63C180D5FE50008DF90 /* SinglePathEnemyGroup.m */; };
@@ -607,6 +608,8 @@
 		8A4CE7F417FD8F1B00241E1F /* GLES-Render.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GLES-Render.h"; sourceTree = "<group>"; };
 		8A4CE7F517FD8F1B00241E1F /* GLES-Render.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = "GLES-Render.mm"; sourceTree = "<group>"; };
 		8A4CE7F717FD8F1B00241E1F /* blocks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blocks.png; path = Resources/blocks.png; sourceTree = "<group>"; };
+		8A6C2D9C1816962E009CDB8B /* DeathHandShake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeathHandShake.h; sourceTree = "<group>"; };
+		8A6C2D9D1816962E009CDB8B /* DeathHandShake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeathHandShake.m; sourceTree = "<group>"; };
 		8A70B632180D35720008DF90 /* LevelModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelModel.h; sourceTree = "<group>"; };
 		8A70B633180D35720008DF90 /* LevelModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LevelModel.m; sourceTree = "<group>"; };
 		8A70B635180D37040008DF90 /* EnemyGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyGroup.h; sourceTree = "<group>"; };
@@ -1288,6 +1291,17 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8A6C2D9B181695F6009CDB8B /* EnemyBossMa */ = {
+			isa = PBXGroup;
+			children = (
+				8A36B78D1811464200E59299 /* EnemyBossMa.h */,
+				8A36B78E1811464200E59299 /* EnemyBossMa.m */,
+				8A6C2D9C1816962E009CDB8B /* DeathHandShake.h */,
+				8A6C2D9D1816962E009CDB8B /* DeathHandShake.m */,
+			);
+			name = EnemyBossMa;
+			sourceTree = "<group>";
+		};
 		8A70B638180D5D2E0008DF90 /* Path */ = {
 			isa = PBXGroup;
 			children = (
@@ -1342,10 +1356,9 @@
 		8A70B63E180D619D0008DF90 /* EnemyType */ = {
 			isa = PBXGroup;
 			children = (
+				8A6C2D9B181695F6009CDB8B /* EnemyBossMa */,
 				8A7F043817FEEDC800A84B23 /* Enemy.h */,
 				8A7F043917FEEDC800A84B23 /* Enemy.m */,
-				8A36B78D1811464200E59299 /* EnemyBossMa.h */,
-				8A36B78E1811464200E59299 /* EnemyBossMa.m */,
 			);
 			name = EnemyType;
 			sourceTree = "<group>";
@@ -1666,6 +1679,7 @@
 				8A4CE69217FD8F1A00241E1F /* CCSpriteBatchNode.m in Sources */,
 				8A4CE61B17FD8F1900241E1F /* CCConfiguration.m in Sources */,
 				8A88EEA41803E438002FA3D2 /* CharacterEntry.m in Sources */,
+				8A6C2D9E1816962E009CDB8B /* DeathHandShake.m in Sources */,
 				8A4CE67717FD8F1A00241E1F /* CCScheduler.m in Sources */,
 				E0DA5CE917FFEDA00038A390 /* CirclePath.m in Sources */,
 				8A4CE6C717FD8F1A00241E1F /* CCDirectorIOS.m in Sources */,

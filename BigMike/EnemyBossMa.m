@@ -29,6 +29,8 @@
         initColor = BOSS_MA_COLOR;
         deadColor = BOSS_MA_COLOR;
         
+        DeathHandShakeCounter = 10;
+        
         self.parentNode = parent;
         self.enemyLabel = [CCLabelTTF labelWithString: str fontName:DEFAULT_FONT fontSize:BOSS_MA_SIZE];
         
@@ -46,6 +48,9 @@
         MinimumDuration = (float)1/BOSS_MA_BULLET_FREQUENCY;
         BulletTimeCounter = 0;
         
+        self.hand =[[DeathHandShake alloc]init:parent:self.enemyLabel:BOSS_MA_HANDSHAKE_TEXT];
+        self.hand2 =[[DeathHandShake alloc]init:parent:self.enemyLabel:BOSS_MA_HANDSHAKE_TEXT];
+        
         return self;
     }
     else
@@ -60,17 +65,37 @@
     
     [super update:dt];
     
+  
+    if(DeathHandShakeCounter>0)
+    {
+       DeathHandShakeCounter -= dt;
+    }
+    else
+    {
+        [self.hand shootAt:CGPointMake(-40, -40) andVectorWith:CGPointMake(-1, -0.5f)];
+        
+         [self.hand2 shootAt:CGPointMake(-40, 40) andVectorWith:CGPointMake(-1, 0.5f)];
+    }
+    
+    if(self.hand->started)
+    {
+        [self.hand update:dt];
+        [self.hand2 update:dt];
+    }
+    
+    
     
     BulletTimeCounter += dt;
     
     if(BulletTimeCounter>MinimumDuration)
     {
-        BulletTimeCounter = 0;
+        
         
         Bullet* currentBullet = self.BulletArray[BulletIndex];
         
         if(!currentBullet->isShooted)
         {
+        BulletTimeCounter = 0;
         
         CGPoint position =self.enemyLabel.position;
         
@@ -86,14 +111,15 @@
         CGPoint Vec2 = CGPointMake(VecX*BOSS_MA_BULLET_SPEED*dt, VecY*BOSS_MA_BULLET_SPEED*dt);
         currentBullet->velicity = Vec2;
         [currentBullet shootFromPosition:position];
-            
-            
-            BulletIndex++;
-            BulletIndex = BulletIndex % BOSS_MA_BULLET_NUMBER;
-        
         }
         
+        BulletIndex++;
+        BulletIndex = BulletIndex % BOSS_MA_BULLET_NUMBER;
         
+        if(BulletIndex== 0)
+        {
+            BulletTimeCounter = -BOSS_MA_BULLET_COOLDOWN;
+        }
     }
     
     
@@ -127,8 +153,6 @@
     if (NO) {
         [super BulletHit];
     }
-    
-
 }
 
 

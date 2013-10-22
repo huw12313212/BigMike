@@ -112,7 +112,7 @@
         self.bulletTexture.position =
         ccpAdd(self.bulletTexture.position,velicity);
         
-        if(result.x > SCREEN_WIDTH+BULLET_OUTSIDE_PADDING || result.x< -BULLET_OUTSIDE_PADDING)
+        if(result.x > SCREEN_WIDTH+BULLET_OUTSIDE_PADDING || result.x< -BULLET_OUTSIDE_PADDING || result.y>SCREEN_HEIGHT + BULLET_OUTSIDE_PADDING || result.y<-BULLET_OUTSIDE_PADDING)
         {
             [self removeBullet: false];
         }

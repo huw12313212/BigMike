@@ -8,7 +8,7 @@
 
 #import "Enemy.h"
 #import "Player.h"
-
+#import "DeathHandShake.h"
 
 
 
@@ -18,10 +18,14 @@
     float MinimumDuration;
     float BulletTimeCounter;
     int BulletIndex;
+    
+    float DeathHandShakeCounter;
 }
 
 @property (strong,nonatomic)NSMutableArray* BulletArray;
 @property (assign,nonatomic)Player* _player;
+@property (strong,nonatomic)DeathHandShake* hand;
+@property (strong,nonatomic)DeathHandShake* hand2;
 
 @end
 
